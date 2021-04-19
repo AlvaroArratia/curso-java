@@ -22,7 +22,6 @@ body {
 
 .enemy1 {
     background: url('../img/1942.gif');
-    background-position: -33px -5px;
     width: 28px;
     height: 28px;
     position: absolute;
@@ -30,7 +29,6 @@ body {
 
 .enemy2 {
     background: url('../img/1942.gif');
-    background-position: -123px -5px;
     width: 28px;
     height: 28px;
     position: absolute;
