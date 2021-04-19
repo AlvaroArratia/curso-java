@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /*outline: 1px solid red;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 970px;
+    margin: auto;
+}
+
+#title img {
+    height: 100px;
+    position: absolute;
+}
+
+#title h1 {
+    font-weight: normal;
+    font-size: 40px;
+    margin-top: 28px;
+    margin-left: 105px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#title h1 span {
+    color: rgb(44, 107, 162);
+}
+
+#subtitle {
+    background: -webkit-linear-gradient(top, rgb(41, 105, 160), rgb(79, 129, 171), rgb(41, 105, 160));
+    font-weight: normal;
+    color: white;
+    font-size: 30px;
+    margin-top: 8px;
+    padding: 10px 10px 10px 25px;
+}
+
+#side-nav {
+    background: -webkit-linear-gradient(top, rgb(228, 228, 228), white);
+    width: 210px;
+    padding-top: 25px;
+    display: inline-block;
+}
+
+#side-nav h4 {
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
+
+#side-nav h4 span {
+    color: red;
+}
+
+#side-nav #nav-p {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 4px;
+    margin-bottom: 20px;
+}
+
+#side-nav p span {
+    color: rgb(44, 107, 162);
+}
+
+#watch {
+    background: -webkit-linear-gradient(top, rgb(79, 129, 171), rgb(41, 105, 160));
+}
+
+#resources {
+    background: -webkit-linear-gradient(top, rgb(234, 167, 75), rgb(239, 115, 0));
+}
+
+#watch,
+#resources {
+    font-size: 17px;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px black;
+    width: 197px;
+    height: 35px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 5px;
+}
+
+#side-nav hr {
+    width: 210px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.ad {
+    background-image: url('img/ad_background.png');
+    text-align: center;
+    width: 200px;
+    height: 280px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 25px;
+}
+
+.ad p {
+    font-size: 22px;
+    font-weight: lighter;
+    color: white;
+    width: 190px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.ad img {
+    height: 115px;
+    margin-top: 5px;
+}
+
+.ad button {
+    background: -webkit-linear-gradient(top, rgb(109, 154, 223), rgb(2, 183, 213));
+    color: white;
+    font-size: 16px;
+    border-radius: 7px;
+    width: 180px;
+    height: 35px;
+    margin-top: 10px;
+}
+
+#body {
+    background: -webkit-linear-gradient(top, rgb(228, 228, 228) 1%, white);
+}
+
+#content {
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#content a {
+    color: rgb(88, 190, 204);
+}
+
+#dns {
+    height: 25px;
+    margin-top: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#dns img {
+    height: 25px;
+    vertical-align: bottom;
+}
+
+#dns a {
+    color: rgb(44, 107, 162);
+}
+
+#phone-img {
+    height: 40px;
+    margin-left: 420px;
+}
+
+#phone-contact {
+    width: 157px;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#number {
+    color: rgb(5, 193, 223);
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#schedule,
+#inter-number {
+    font-size: 10px;
+    text-align: right;
+}
+
+#content hr {
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+#main-content {
+    width: 690px;
+}
+
+#main-content img {
+    width: 220px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 235px;
+}
+
+#main-content h3 {
+    color: rgb(44, 107, 162);
+    margin-bottom: 5px;
+}
+
+#main-content ul,
+#main-content ol {
+    margin-top: 5px;
+    margin-left: 35px;
+}
+
+#main-content li {
+    margin-bottom: 3px;
+}
+
+#main-content p,
+#main-content ul,
+#main-content ol {
+    font-size: 14px;
+    width: 650px;
+}
+
+#subcontent {
+    border: 5px solid rgb(0, 133, 224);
+    margin-top: 20px;
+}
+
+#subcontent img {
+    width: 110px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#subontent-text {
+    width: 545px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#subontent-text h3 {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#subontent-text p {
+    width: 535px;
+}

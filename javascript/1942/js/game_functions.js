@@ -1,0 +1,131 @@
+document.getElementById("container").style["background"] = "url('img/sea.jpg')";
+document.getElementById("container").style["background-repeat"] = "no-repeat";
+document.getElementById("container").style["background-size"] = "cover";
+
+var heroPoints = 100;
+document.getElementById("score").innerText = heroPoints;
+
+var heroPos = {
+    x: 300,
+    y: 300
+}
+
+var enemies = [{
+    x: 150,
+    y: 50
+}, {
+    x: 250,
+    y: 50
+}, {
+    x: 350,
+    y: 50
+}, {
+    x: 450,
+    y: 50
+}, {
+    x: 550,
+    y: 50
+}, {
+    x: 650,
+    y: 50
+}, {
+    x: 750,
+    y: 50
+}];
+
+function displayHero() {
+    document.getElementById("hero").style["top"] = heroPos.y + "px";
+    document.getElementById("hero").style["left"] = heroPos.x + "px";
+}
+
+function displayEnemies() {
+    var output = "";
+    for (var i = 0; i < enemies.length; i++) {
+        if (i % 2 === 0) {
+            output += '<div class="enemy enemy2" style="top:' + enemies[i].y + 'px; left:' + enemies[i].x +
+                'px;"></div>';
+        } else {
+            output += '<div class="enemy enemy1" style="top:' + enemies[i].y + 'px; left:' + enemies[i].x +
+                'px;"></div>';
+        }
+    }
+    document.getElementById("enemies").innerHTML = output;
+}
+
+function moveEnemies() {
+    for (var i = 0; i < enemies.length; i++) {
+        enemies[i].y += 10;
+    }
+}
+
+function moveBullets() {
+    var bullets = document.getElementsByClassName("bullet");
+    for (var i = 0; i < bullets.length; i++) {
+        var topValue = parseInt(bullets[i].style["top"].split("px")[0]);
+        bullets[i].style["top"] = (topValue - 10) + "px";
+    }
+}
+
+function enemiesCollision() {
+    for (var i = 0; i < enemies.length; i++) {
+        if (heroPos.x === enemies[i].x && heroPos.y === enemies[i].y) {
+            heroPoints -= 500;
+            document.getElementById("score").innerText = heroPoints;
+        }
+    }
+}
+
+function wallCollision() {
+    for (var i = 0; i < enemies.length; i++) {
+        if (enemies[i].y >= 500) {
+            enemies[i].y = 50;
+        }
+    }
+}
+
+function bulletsCollision() {
+    var bullets = document.getElementsByClassName("bullet");
+    var docEnemies = document.getElementsByClassName("enemy");
+    for (var j = 0; j < bullets.length; j++) {
+        for (var i = 0; i < docEnemies.length; i++) {
+            var topValue = parseInt(bullets[j].style["top"].split("px")[0]);
+            var leftValue = parseInt(bullets[j].style["left"].split("px")[0]);
+            if (leftValue === enemies[i].x && topValue <= enemies[i].y + 10) {
+                docEnemies[i].style["background-position"] = -109 + "px " + -30 + "px";
+            }
+        }
+    }
+}
+
+function gameLoop() {
+    displayHero();
+    moveEnemies();
+    moveBullets();
+    displayEnemies();
+    enemiesCollision();
+    bulletsCollision();
+    wallCollision();
+}
+
+setInterval(gameLoop, 1000);
+
+document.onkeydown = function (e) {
+    if (e.key === "ArrowLeft" && heroPos.x - 10 >= 50) {
+        heroPos.x -= 10;
+    } else if (e.key === "ArrowRight" && heroPos.x + 10 <= 950) {
+        heroPos.x += 10;
+    } else if (e.key === "ArrowUp" && heroPos.y - 10 >= 50) {
+        heroPos.y -= 10;
+    } else if (e.key === "ArrowDown" && heroPos.y + 10 <= 500) {
+        heroPos.y += 10;
+    }
+
+    if (e.key === " ") {
+        document.getElementById("bullets").innerHTML += '<div class="bullet" style="top:' + (heroPos.y - 10) +
+            'px; left:' + heroPos.x + 'px;"></div>';
+    }
+    displayHero();
+    enemiesCollision();
+}
+
+gameLoop();

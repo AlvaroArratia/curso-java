@@ -1,0 +1,141 @@
+* {
+    /*outline: 1px solid red;*/
+    margin: 0;
+}
+
+.container {
+    background: -webkit-radial-gradient(center, #6F5964, #1D0C11);
+    width: 995px;
+    margin: auto;
+}
+
+#header {
+    background-color: rgb(248, 248, 248);
+}
+
+#header h1 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin-left: 20px;
+    margin-right: 175px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#header h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 175px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#user-info {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#profile-img {
+    height: 270px;
+    border: 7px solid silver;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+#about {
+    background: -webkit-linear-gradient(left, white, rgba(218, 203, 217));
+    width: 486px;
+    height: 284px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+h3 {
+    background: -webkit-linear-gradient(top, rgb(176, 176, 180), rgb(135, 133, 147), rgb(176, 176, 180));
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+p a {
+    color: black;
+}
+
+#portfolio {
+    padding: 20px 30px 20px 30px;
+}
+
+#lamode,
+#famcontacts,
+#fiveeleven {
+    background: -webkit-linear-gradient(left, white, rgba(218, 203, 217));
+    width: 296px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#lamode,
+#famcontacts {
+    margin-right: 19px;
+}
+
+.img-page {
+    width: 280px;
+}
+
+#portfolio p {
+    font-size: 15px;
+    text-align: justify;
+    height: 123px;
+    margin-bottom: 40px;
+}
+
+h4 {
+    background: -webkit-linear-gradient(top, rgb(176, 176, 180), rgb(135, 133, 147), rgb(176, 176, 180));
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 7px;
+}
+
+.tech-img {
+    padding: 10px 10px 5px 10px;
+}
+
+.tech-img img {
+    height: 40px;
+    margin: 4px;
+}
+
+input {
+    background-color: rgb(51, 124, 90);
+    color: white;
+    font-weight: bold;
+    height: 27px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    text-align: center;
+}
+
+#footer {
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+    text-decoration: none;
+}
+
+#footer img {
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: bottom;
+}

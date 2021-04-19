@@ -1,0 +1,98 @@
+@import "variables/variables.scss";
+@import "align/align.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-width: 260px;
+    margin: auto;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 950px;
+    padding-bottom: 10px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+}
+
+@for $width from 1 through $columns {
+    .col-#{$width} {
+        flex-basis: $width / $columns * 100%;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.box {
+    font-size: 14px;
+    text-align: center;
+    color: red;
+    justify-content: center;
+}
+
+.box-large {
+    font-size: 15px;
+    color: red;
+}
+
+.space {
+    text-align: end;
+    color: red;
+    padding-right: 5px;
+}
+
+.element {
+    text-align: center;
+    border: 0.5px solid black;
+
+    .atomic-n,
+    .mass {
+        font-size: 12px;
+    }
+
+    .letter {
+        font-size: 21px;
+        font-weight: bolder;
+        color: $letter;
+    }
+}
+
+.blue-element {
+    background-color: $blue-element;
+}
+
+.pink-element {
+    background-color: $pink-element;
+}
+
+.yellow-element {
+    background-color: $yellow-element;
+}
+
+.green-element {
+    background-color: $green-element;
+}
+
+.bg-color {
+    background-color: $bg_color;
+}

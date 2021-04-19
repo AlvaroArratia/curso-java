@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div style="width: 250px;margin: auto;">
+        <h3>Mi Formulario de Registro</h3>
+        <form>
+            <label for="name" style="display: inline-block;width: 112px;">Nombre: </label>
+            <input type="text" id="name" name="name" style="width: 125px;"><br><br>
+
+            <label for="lastName" style="display: inline-block;width: 112px;">Apellido: </label>
+            <input type="text" id="lastName" name="lastName" style="width: 125px;"><br><br>
+
+            <label for="email" style="display: inline-block;width: 112px;">Email: </label>
+            <input type="email" id="email" name="email" style="width: 125px;"><br><br>
+
+            <label for="pass" style="display: inline-block;width: 112px;">Contraseña: </label>
+            <input type="password" id="pass" name="pass" style="width: 125px;"><br><br>
+
+            <label for="confirmPass" style="display: inline-block;width: 112px;">Confirmar: </label>
+            <input type="password" id="confirmPass" name="confirmPass" style="width: 125px;"><br><br>
+
+            <label for="birthday" style="display: inline-block;width: 112px;">Cumpleaños: </label>
+            <input type="date" id="birthday" name="birthday" style="width: 125px;"><br><br>
+
+            <input type="radio" id="male" name="gender" value="Hombre">
+            <label for="male">Hombre</label>
+            <input type="radio" id="female" name="gender" value="Mujer">
+            <label for="female">Mujer</label>
+            <input type="radio" id="other" name="gender" value="Otro">
+            <label for="other">Otro</label><br><br>
+
+            <label for="description">Una breve escripcion de ti:</label><br><br>
+            <textarea name="description" id="description" cols="30" rows="10" style="width: 243px;"></textarea><br><br>
+
+            <label for="languages">Lenguaje Favorito:</label>
+            <select name="languages" id="languages">
+                <option value="java">Java</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="python">Python</option>
+                <option value="javascript">Javascript</option>
+                <option value="c">C</option>
+            </select><br><br>
+
+            <input type="button" name="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+
+</html>

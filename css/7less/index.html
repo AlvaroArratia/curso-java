@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less</title>
+    <!--<link rel="stylesheet/less" type="text/css" href="styles.less" />-->
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="row">
+            <span class="col col-2 align-items-center">Less/Sass</span>
+            <div class="col col-11 buttons">
+                <button>Boton 1</button>
+                <button>Boton 2</button>
+                <button>Boton 3</button>
+            </div>
+            <form class="col col-3 justify-content-center align-items-center" action="search">
+                <input id="text" type="text" placeholder="Buscar">
+                <input id="button" type="button" value="Buscar">
+            </form>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-4" id="navigation"></div>
+            <div class="container-fluid" id="content">
+                <div class="row">
+                    <div class="col col-5 subcontents"></div>
+                    <div class="col col-5 subcontents"></div>
+                    <div class="col col-5 subcontents"></div>
+                </div>
+                <div class="row" id="subcontent-bottom"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

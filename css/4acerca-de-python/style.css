@@ -1,0 +1,198 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /*outline: 1px solid red;*/
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgb(38, 81, 117);
+    width: 970px;
+    margin: auto;
+}
+
+#header {
+    height: 118px;
+}
+
+#header img {
+    width: 360px;
+    margin: 10px 10px 10px 30px;
+    display: inline-block;
+}
+
+#header #block-right {
+    height: 101px;
+    width: 424px;
+    margin: 10px 10px 10px 125px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#block-right p {
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    width: 210px;
+    margin: 0px 0px 7px 175px;
+}
+
+#block-right p u {
+    color: rgb(212, 178, 0);
+}
+
+#block-right form {
+    background-color: rgb(68, 68, 68);
+    text-align: right;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    width: 210px;
+    padding: 13px 30px 13px 35px;
+    margin-left: 149px;
+}
+
+form #text {
+    text-align: center;
+    box-shadow: 1px 1px black;
+    height: 30px;
+    width: 160px;
+}
+
+form #button {
+    background-color: rgb(38, 81, 117);
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    font-size: 12px;
+    color: white;
+    height: 28px;
+    width: 35px;
+    margin-left: 5px;
+}
+
+nav {
+    background-color: rgb(73, 127, 171);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    width: 800px;
+    padding: 15px 10px 15px 10px;
+    margin: auto;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    margin-left: 40px;
+}
+
+#python-info {
+    height: 315px;
+}
+
+#python-info ul {
+    list-style-position: inside;
+    list-style-type: ">>";
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 211, 67);
+    margin: 35px 0px 0px 90px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#python-info ul a {
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+    margin-left: 8px;
+}
+
+#python-info ul li {
+    margin: 13px;
+}
+
+#python-info p {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    width: 625px;
+    margin-left: 55px;
+    padding: 20px 0 10px 0;
+    display: inline-block;
+}
+
+#python-info p u {
+    font-size: 17px;
+    color: rgb(255, 211, 67);
+}
+
+#main-content {
+    background-color: white;
+    height: 255px;
+}
+
+#getting-started,
+#applications {
+    text-decoration: none;
+    text-align: center;
+    height: 230px;
+    width: 400px;
+    margin-top: 15px;
+    margin-left: 55px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+hr {
+    background-color: rgb(117, 168, 211);
+    height: 3px;
+    width: 400px;
+    margin: auto;
+}
+
+#main-content a {
+    color: rgb(120, 170, 212);
+}
+
+#main-content h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main-content p {
+    font-size: 16px;
+    width: 370px;
+    margin: auto;
+}
+
+#main-content ul {
+    list-style-position: outside;
+    list-style-type: square;
+    margin-top: 7px;
+}
+
+#main-content li {
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+#footer {
+    background: -webkit-linear-gradient(top, rgb(38, 81, 117), rgb(55, 117, 170));
+    text-align: center;
+    font-size: 10px;
+    color: rgb(133, 182, 224);
+    padding-top: 55px;
+    padding-bottom: 5px;
+}
+
+#footer a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(133, 182, 224);
+}
+
+#footer p {
+    margin-top: 5px;
+}

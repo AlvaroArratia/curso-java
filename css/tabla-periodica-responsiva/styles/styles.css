@@ -1,0 +1,255 @@
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-content-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align-items-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  min-width: 260px;
+  margin: auto;
+}
+
+.container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-width: 950px;
+  padding-bottom: 10px;
+}
+
+.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1px;
+}
+
+.col-1 {
+  -ms-flex-preferred-size: 4.7619%;
+      flex-basis: 4.7619%;
+}
+
+.col-2 {
+  -ms-flex-preferred-size: 9.52381%;
+      flex-basis: 9.52381%;
+}
+
+.col-3 {
+  -ms-flex-preferred-size: 14.28571%;
+      flex-basis: 14.28571%;
+}
+
+.col-4 {
+  -ms-flex-preferred-size: 19.04762%;
+      flex-basis: 19.04762%;
+}
+
+.col-5 {
+  -ms-flex-preferred-size: 23.80952%;
+      flex-basis: 23.80952%;
+}
+
+.col-6 {
+  -ms-flex-preferred-size: 28.57143%;
+      flex-basis: 28.57143%;
+}
+
+.col-7 {
+  -ms-flex-preferred-size: 33.33333%;
+      flex-basis: 33.33333%;
+}
+
+.col-8 {
+  -ms-flex-preferred-size: 38.09524%;
+      flex-basis: 38.09524%;
+}
+
+.col-9 {
+  -ms-flex-preferred-size: 42.85714%;
+      flex-basis: 42.85714%;
+}
+
+.col-10 {
+  -ms-flex-preferred-size: 47.61905%;
+      flex-basis: 47.61905%;
+}
+
+.col-11 {
+  -ms-flex-preferred-size: 52.38095%;
+      flex-basis: 52.38095%;
+}
+
+.col-12 {
+  -ms-flex-preferred-size: 57.14286%;
+      flex-basis: 57.14286%;
+}
+
+.col-13 {
+  -ms-flex-preferred-size: 61.90476%;
+      flex-basis: 61.90476%;
+}
+
+.col-14 {
+  -ms-flex-preferred-size: 66.66667%;
+      flex-basis: 66.66667%;
+}
+
+.col-15 {
+  -ms-flex-preferred-size: 71.42857%;
+      flex-basis: 71.42857%;
+}
+
+.col-16 {
+  -ms-flex-preferred-size: 76.19048%;
+      flex-basis: 76.19048%;
+}
+
+.col-17 {
+  -ms-flex-preferred-size: 80.95238%;
+      flex-basis: 80.95238%;
+}
+
+.col-18 {
+  -ms-flex-preferred-size: 85.71429%;
+      flex-basis: 85.71429%;
+}
+
+.col-19 {
+  -ms-flex-preferred-size: 90.47619%;
+      flex-basis: 90.47619%;
+}
+
+.col-20 {
+  -ms-flex-preferred-size: 95.2381%;
+      flex-basis: 95.2381%;
+}
+
+.col-21 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.box {
+  font-size: 14px;
+  text-align: center;
+  color: red;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box-large {
+  font-size: 15px;
+  color: red;
+}
+
+.space {
+  text-align: end;
+  color: red;
+  padding-right: 5px;
+}
+
+.element {
+  text-align: center;
+  border: 0.5px solid black;
+}
+
+.element .atomic-n,
+.element .mass {
+  font-size: 12px;
+}
+
+.element .letter {
+  font-size: 21px;
+  font-weight: bolder;
+  color: #1913b6;
+}
+
+.blue-element {
+  background-color: #689bff;
+}
+
+.pink-element {
+  background-color: #fd9a98;
+}
+
+.yellow-element {
+  background-color: #fecb00;
+}
+
+.green-element {
+  background-color: #1fca21;
+}
+
+.bg-color {
+  background-color: #eeeeee;
+}
+/*# sourceMappingURL=styles.css.map */

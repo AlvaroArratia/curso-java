@@ -1,0 +1,69 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+h1 {
+    background-color: rgb(179, 179, 179);
+    margin: 10px 10px 10px 10px;
+    padding: 20px 10px 20px 10px;
+}
+
+p {
+    background-color: rgb(204, 204, 204);
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 30px 10px;
+}
+
+footer {
+    background-color: rgb(255, 255, 154);
+    margin: 10px 10px 10px 10px;
+    padding: 15px 10px 15px 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    #desktop {
+        display: none;
+    }
+
+    #table {
+        display: none;
+    }
+
+    #phone {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    #desktop {
+        display: none;
+    }
+
+    #table {
+        display: block;
+    }
+
+    #phone {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #desktop {
+        display: block;
+    }
+
+    #table {
+        display: none;
+    }
+
+    #phone {
+        display: none;
+    }
+}

@@ -1,0 +1,22 @@
+# General
+.vscode
+intro/
+node_modules/
+
+respuestas_desafios.js
+*.rar
+*.pdf
+*.docx
+
+## HTML
+html/desafios_profe.xlsx
+
+## CSS
+css/7less-viejo/
+css/practica-grid/
+css/responsive-grid-sass/
+css/layouts/
+
+css/3portafolio/style.css
+
+## JS
