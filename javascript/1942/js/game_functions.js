@@ -82,9 +82,28 @@ function moveBullets() {
 
 function enemiesCollision() {
     for (var i = 0; i < enemies.length; i++) {
-        if (heroPos.x === enemies[i].x && heroPos.y === enemies[i].y) {
-            if (document.getElementsByClassName("enemy")[i].style["background-position"] !== "-109px -30px") {
-                heroPoints -= 500;
+        if (heroPos.x === enemies[i].x && heroPos.y === enemies[i].y &&
+            document.getElementsByClassName("enemy")[i].style["background-position"] !== "-109px -30px") {
+            heroPoints -= 500;
+            document.getElementById("score").innerText = heroPoints;
+        }
+    }
+}
+
+function bulletsCollision() {
+    var bullets = document.getElementsByClassName("bullet");
+    var docEnemies = document.getElementsByClassName("enemy");
+    for (var j = 0; j < bullets.length; j++) {
+        for (var i = 0; i < docEnemies.length; i++) {
+            var topValue = parseInt(bullets[j].style["top"].split("px")[0]);
+            var leftValue = parseInt(bullets[j].style["left"].split("px")[0]);
+            if (enemies[i].bx !== -109 && enemies[i].by !== -30 && leftValue === enemies[i].x &&
+                topValue <= enemies[i].y + 10 && topValue >= enemies[i].y - 10) {
+                document.getElementById("explotion").play();
+                document.getElementsByClassName("enemy")[i].style["background-position"] = -109 + "px " + -30 + "px";
+                enemies[i].bx = -109;
+                enemies[i].by = -30;
+                heroPoints += 10;
                 document.getElementById("score").innerText = heroPoints;
             }
         }
@@ -113,24 +132,6 @@ function wallCollision() {
     }
 }
 
-function bulletsCollision() {
-    var bullets = document.getElementsByClassName("bullet");
-    var docEnemies = document.getElementsByClassName("enemy");
-    for (var j = 0; j < bullets.length; j++) {
-        for (var i = 0; i < docEnemies.length; i++) {
-            var topValue = parseInt(bullets[j].style["top"].split("px")[0]);
-            var leftValue = parseInt(bullets[j].style["left"].split("px")[0]);
-            if (enemies[i].bx !== -109 && enemies[i].by !== -30 && leftValue === enemies[i].x && topValue <= enemies[i].y + 10 && topValue >= enemies[i].y - 10) {
-                document.getElementsByClassName("enemy")[i].style["background-position"] = -109 + "px " + -30 + "px";
-                enemies[i].bx = -109;
-                enemies[i].by = -30;
-                heroPoints += 10;
-                document.getElementById("score").innerText = heroPoints;
-            }
-        }
-    }
-}
-
 function gameLoop() {
     moveEnemies();
     moveBullets();
@@ -141,6 +142,8 @@ function gameLoop() {
 }
 
 setInterval(gameLoop, 1000);
+
+gameLoop();
 
 document.onkeydown = function (e) {
     if (e.key === "ArrowLeft" && heroPos.x - 10 >= 50) {
@@ -161,5 +164,3 @@ document.onkeydown = function (e) {
             'px; left:' + heroPos.x + 'px;"></div>';
     }
 }
-
-gameLoop();
