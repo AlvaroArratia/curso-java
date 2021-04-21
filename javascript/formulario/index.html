@@ -18,39 +18,36 @@
 <body>
     <div class="container mt-4 mb-4 p-4 border border-2 border-danger shadow-lg p-3 
     mb-4 bg-body rounded bg-transparent">
-        <h1 class="text-center mt-1 mb-5">Registre sus datos</h1>
+        <h1 class="text-center mt-1 mb-5">Ingrese sus datos</h1>
         <form>
             <div class="row g-3 mb-3">
                 <div class="col-md-6">
                     <label for="name" class="form-label">Nombres *</label>
                     <input type="text" class="form-control" id="name">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
-                    </div>
+                    <div id="name-help" class="form-text text-danger text-end" hidden>Debe completar este campo.</div>
                 </div>
                 <div class="col-md-6">
                     <label for="last-name" class="form-label">Apellidos *</label>
                     <input type="text" class="form-control" id="last-name">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
+                    <div id="last-name-help" class="form-text text-danger text-end" hidden>Debe completar este campo.
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="dni" class="form-label">RUT *</label>
                     <input type="text" class="form-control" id="dni" placeholder="XXXXXXXX-X"
                         aria-describedby="dniHelp">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
+                    <div id="dni-help" class="form-text text-dark text-end">Debe ingresar su rut sin puntos y con guion.
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email *</label>
                     <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend2">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
-                    </div>
+                    <div id="email-help" class="form-text text-danger text-end" hidden>Debe completar este campo.</div>
                 </div>
                 <div class="col-md-4">
                     <label for="city" class="form-label">Ciudad *</label>
                     <input type="text" class="form-control" id="city">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
-                    </div>
+                    <div id="city-help" class="form-text text-danger text-end" hidden>Debe completar este campo.</div>
                 </div>
                 <div class="col-md-4">
                     <label for="state" class="form-label">Región *</label>
@@ -58,29 +55,24 @@
                         <option selected disabled value="">Seleccionar...</option>
                         <option>Region de la Araucanía</option>
                     </select>
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
-                    </div>
+                    <div id="state-help" class="form-text text-danger text-end" hidden>Debe completar este campo.</div>
                 </div>
                 <div class="col-md-4">
-                    <label for="zipcode" class="form-label">Codigo postal *</label>
-                    <input type="text" class="form-control" id="zipcode">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
-                    </div>
+                    <label for="zip-code" class="form-label">Codigo postal *</label>
+                    <input type="text" class="form-control" id="zip-code">
+                    <div id="zip-code-help" class="form-text text-danger text-end" hidden>Debe completar este campo.</div>
                 </div>
             </div>
             <div class="row">
                 <div class="col mb-3">
                     <label for="password" class="form-label">Contraseña *</label>
                     <input type="password" class="form-control" id="password">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
-                    </div>
+                    <div id="password-help" class="form-text text-danger text-end" hidden>Debe completar este campo.</div>
                 </div>
                 <div class="col mb-3">
-                    <label for="repeatpassword" class="form-label">Repita su contraseña *</label>
-                    <input type="password" class="form-control" id="repeatpassword">
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
-                    </div>
-                    <div id="dniHelp" class="form-text text-dark text-end">Debe ingresar su RUT sin puntos y con guion.
+                    <label for="password-repeat" class="form-label">Repita su contraseña *</label>
+                    <input type="password" class="form-control" id="password-repeat">
+                    <div id="password-repeat-help" class="form-text text-danger text-end" hidden>Debe completar este campo.
                     </div>
                 </div>
             </div>
@@ -90,12 +82,12 @@
                     promociones y otros beneficios</label>
             </div>
             <div class="mb-3 form-check">
-                <input class="form-check-input is-invalid" type="checkbox" value="" id="temrs"
+                <input class="form-check-input is-invalid" type="checkbox" value="" id="terms"
                     aria-describedby="termsfeedback">
                 <label class="form-check-label" for="temrs">
                     Aceptar los terminos y condiciones *
                 </label>
-                <div id="termsfeedback" class="invalid-feedback" hidden>
+                <div id="terms-help" class="invalid-feedback" hidden>
                     Para poder registrar sus datos debe aceptar los terminos.
                 </div>
             </div>
