@@ -15,7 +15,7 @@
 
 <!--style="background-image: url('backgound.jpg');background-size: cover;"-->
 
-<body style="background-image: url('backgound.jpg');background-size: cover;">
+<body style="background-image: url('img/backgound.jpg');background-size: cover;">
     <nav class="navbar navbar-expand-lg navbar-light navbar-nav-scroll sticky-top"
         style="background-color: rgb(240, 240, 240);">
         <div class="container-fluid">
@@ -46,18 +46,18 @@
     </nav>
     <div class="container mh-100 mt-4 mb-4 p-4 border border-2 border-secondary shadow-lg p-3 
     mb-4 bg-body rounded bg-transparent">
-        <h1 class="text-center mt-1 mb-4">Sea parte de nuestra familia</h1>
+        <h1 class="text-center mt-1 mb-4">Se parte de nuestra familia</h1>
         <form>
             <div class="row g-3 mb-3">
                 <div class="col-md-6">
                     <label for="name" class="form-label">Nombres *</label>
                     <input type="text" class="form-control border border-secondary" id="name">
-                    <div id="name-help" class="alert alert-danger text-end" hidden>Debe completar este campo.</div>
+                    <div id="name-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.</div>
                 </div>
                 <div class="col-md-6">
                     <label for="last-name" class="form-label">Apellidos *</label>
                     <input type="text" class="form-control border border-secondary" id="last-name">
-                    <div id="last-name-help" class="alert alert-danger text-end" hidden>Debe completar este campo.
+                    <div id="last-name-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -69,23 +69,20 @@
                 <div class="col-md-6">
                     <label for="birth-date" class="form-label">Fecha de nacimiento *</label>
                     <input type="date" class="form-control border border-secondary" id="birth-date">
-                    <div id="birth-date-help" class="alert alert-danger text-end" hidden>Debe completar este campo.
+                    <div id="birth-date-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="celphone" class="form-label">Número de celular *</label>
                     <input type="text" class="form-control border border-secondary" id="celphone">
-                    <div id="celphone-help" class="alert alert-danger text-end" hidden>Debe completar este campo.</div>
+                    <div id="celphone-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email *</label>
                     <input type="email" class="form-control border border-secondary" id="email">
-                    <div id="email-help" class="alert alert-danger text-end" hidden>Debe completar este campo.</div>
-                </div>
-                <div class="col-md-4">
-                    <label for="city" class="form-label">Ciudad *</label>
-                    <input type="text" class="form-control border border-secondary" id="city">
-                    <div id="city-help" class="alert alert-danger text-end" hidden>Debe completar este campo.</div>
+                    <div id="email-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <label for="state" class="form-label">Región *</label>
@@ -108,24 +105,33 @@
                         <option>Región de Aysén del General Carlos Ibáñez del Campo</option>
                         <option>Región de Magallanes y la Antártica Chilena</option>
                     </select>
-                    <div id="state-help" class="alert alert-danger text-end" hidden>Debe seleccionar una opción.</div>
+                    <div id="state-help" class="alert alert-danger mt-1 text-end" hidden>Debe seleccionar una opción.
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="city" class="form-label">Ciudad *</label>
+                    <input type="text" class="form-control border border-secondary" id="city">
+                    <div id="city-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.</div>
                 </div>
                 <div class="col-md-4">
                     <label for="zip-code" class="form-label">Codigo postal *</label>
                     <input type="text" class="form-control border border-secondary" id="zip-code">
-                    <div id="zip-code-help" class="alert alert-danger text-end" hidden>Debe completar este campo.</div>
+                    <div id="zip-code-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col mb-3">
                     <label for="password" class="form-label">Contraseña *</label>
                     <input type="password" class="form-control border border-secondary" id="password">
-                    <div id="password-help" class="alert alert-danger text-end" hidden>Debe completar este campo.</div>
+                    <div id="password-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.
+                    </div>
                 </div>
                 <div class="col mb-3">
                     <label for="password-repeat" class="form-label">Repita su contraseña *</label>
                     <input type="password" class="form-control border border-secondary" id="password-repeat">
-                    <div id="password-repeat-help" class="alert alert-danger text-end" hidden>Debe completar este campo.
+                    <div id="password-repeat-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este
+                        campo.
                     </div>
                 </div>
             </div>
@@ -147,7 +153,7 @@
             <button type="button" class="btn btn-outline-danger" onclick="validations()">Registrarse</button>
         </form>
     </div>
-    <script src="functions.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 
 </html>

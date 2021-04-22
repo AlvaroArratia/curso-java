@@ -5,10 +5,10 @@ function validateNames() {
 
     } else {
         document.getElementById("name-help").hidden = true;
-        var regex = new RegExp("([0-1])+");
+        var regex = /([0-1])+/;
         var name = document.getElementById("name").value;
         if (regex.test(name)) {
-            document.getElementById("name-help").textContent = "El nombre solo puede tener letras.";
+            document.getElementById("name-help").textContent = "El nombre solo puede contener letras.";
             document.getElementById("name-help").hidden = false;
         }
     }
@@ -17,10 +17,10 @@ function validateNames() {
         document.getElementById("last-name-help").hidden = false;
     } else {
         document.getElementById("last-name-help").hidden = true;
-        var regex = new RegExp("([0-1])+");
+        var regex = /([0-1])+/;
         var lastName = document.getElementById("last-name").value;
         if (regex.test(lastName)) {
-            document.getElementById("last-name-help").textContent = "El apellido solo puede tener letras.";
+            document.getElementById("last-name-help").textContent = "El apellido solo puede contener letras.";
             document.getElementById("last-name-help").hidden = false;
         }
     }
@@ -32,7 +32,7 @@ function validateDni() {
     } else {
         document.getElementById("dni-help").className = "form-text text-dark text-end";
         var dni = document.getElementById("dni").value;
-        var regex = new RegExp("^\d{1,2}\d{3}\d{3}[-][0-9kK]{1}$");
+        var regex = /^\d{1,2}\d{3}\d{3}[-][0-9kK]{1}$/;
         if (!regex.test(dni)) {
             document.getElementById("dni-help").className = "alert alert-danger text-end";
         }
@@ -47,7 +47,7 @@ function validateBirthDate() {
         document.getElementById("birth-date-help").hidden = true;
         var yearNow = new Date().getFullYear();
         var birthDate = document.getElementById("birth-date").value;
-        var regex = new RegExp("^(\d{4})(-)(0[1-9]|1[0-2])\2([0-2][0-9]|3[0-1])$");
+        var regex = /^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/;
         if (!regex.test(birthDate)) {
             document.getElementById("birth-date-help").textContent = "La fecha ingresada es incorrecta.";
             document.getElementById("birth-date-help").hidden = false;
@@ -62,7 +62,7 @@ function validateCelphone() {
     } else {
         document.getElementById("celphone-help").hidden = true;
         var celphone = document.getElementById("celphone").value;
-        var regex = new RegExp("^([0-9]{9})*$");
+        var regex = /^([0-9]{9})*$/;
         if (!regex.test(celphone)) {
             document.getElementById("celphone-help").textContent = "El celular solo puede contener números y debe ser de 9 digitos.";
             document.getElementById("celphone-help").hidden = false;
@@ -77,7 +77,7 @@ function validateEmail() {
     } else {
         document.getElementById("email-help").hidden = true;
         var email = document.getElementById("email").value;
-        var regex = new RegExp("^[^@]+@[^@]+\.[a-zA-Z]{2,}$");
+        var regex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
         if (!regex.test(email)) {
             document.getElementById("email-help").textContent = "Formato de email incorrecto.";
             document.getElementById("email-help").hidden = false;
@@ -90,6 +90,12 @@ function validateCity() {
         document.getElementById("city-help").hidden = false;
     } else {
         document.getElementById("city-help").hidden = true;
+        var regex = /([0-1])+/;
+        var city = document.getElementById("city").value;
+        if (regex.test(city)) {
+            document.getElementById("city-help").textContent = "La ciudad solo puede contener letras.";
+            document.getElementById("city-help").hidden = false;
+        }
     }
 }
 
@@ -108,7 +114,7 @@ function validateZipCode() {
     } else {
         document.getElementById("zip-code-help").hidden = true;
         var zipCode = document.getElementById("zip-code").value;
-        var regex = new RegExp("^([0-9])*$");
+        var regex = /^([0-9])*$/;
         if (!regex.test(zipCode)) {
             document.getElementById("zip-code-help").textContent = "El codigo postal solo puede contener números.";
             document.getElementById("zip-code-help").hidden = false;
@@ -155,7 +161,7 @@ function validateTerms() {
 function validations() {
     validateNames();
     validateDni();
-    //validateBirthDate();
+    validateBirthDate();
     validateCelphone();
     validateEmail();
     validateCity();
