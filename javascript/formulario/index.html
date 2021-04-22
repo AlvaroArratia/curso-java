@@ -13,8 +13,6 @@
     </script>
 </head>
 
-<!--style="background-image: url('backgound.jpg');background-size: cover;"-->
-
 <body style="background-image: url('img/backgound.jpg');background-size: cover;">
     <nav class="navbar navbar-expand-lg navbar-light navbar-nav-scroll sticky-top"
         style="background-color: rgb(240, 240, 240);">
@@ -86,32 +84,19 @@
                 </div>
                 <div class="col-md-4">
                     <label for="state" class="form-label">Región *</label>
-                    <select class="form-select  border border-secondary" id="state">
-                        <option selected disabled value="">Seleccionar...</option>
-                        <option>Región de Arica y Parinacota</option>
-                        <option>Región de Tarapacá</option>
-                        <option>Región de Antofagasta</option>
-                        <option>Región de Atacama</option>
-                        <option>Región de Coquimbo</option>
-                        <option>Región de Valparaíso</option>
-                        <option>Región Metropolitana de Santiago</option>
-                        <option>Región del Libertador General Bernardo O’Higgins</option>
-                        <option>Región del Maule</option>
-                        <option>Región del Ñuble</option>
-                        <option>Región del Biobío</option>
-                        <option>Región de La Araucanía</option>
-                        <option>Región de Los Ríos</option>
-                        <option>Región de Los Lagos</option>
-                        <option>Región de Aysén del General Carlos Ibáñez del Campo</option>
-                        <option>Región de Magallanes y la Antártica Chilena</option>
+                    <select class="form-select  border border-secondary" id="state" onchange="fillCities()">
+
                     </select>
                     <div id="state-help" class="alert alert-danger mt-1 text-end" hidden>Debe seleccionar una opción.
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label for="city" class="form-label">Ciudad *</label>
-                    <input type="text" class="form-control border border-secondary" id="city">
-                    <div id="city-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.</div>
+                    <select class="form-select  border border-secondary" id="city">
+
+                    </select>
+                    <div id="city-help" class="alert alert-danger mt-1 text-end" hidden>Debe seleccionar una opción.
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <label for="zip-code" class="form-label">Codigo postal *</label>
@@ -153,7 +138,8 @@
             <button type="button" class="btn btn-outline-danger" onclick="validations()">Registrarse</button>
         </form>
     </div>
-    <script src="js/functions.js"></script>
+    <script src="js/cities.js"></script>
+    <script src="js/validations.js"></script>
 </body>
 
 </html>

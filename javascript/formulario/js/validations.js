@@ -2,7 +2,6 @@ function validateNames() {
     if (document.getElementById("name").value === "") {
         document.getElementById("name-help").textContent = "Debe completar este campo.";
         document.getElementById("name-help").hidden = false;
-
     } else {
         document.getElementById("name-help").hidden = true;
         var regex = /([0-1])+/;
@@ -90,12 +89,6 @@ function validateCity() {
         document.getElementById("city-help").hidden = false;
     } else {
         document.getElementById("city-help").hidden = true;
-        var regex = /([0-1])+/;
-        var city = document.getElementById("city").value;
-        if (regex.test(city)) {
-            document.getElementById("city-help").textContent = "La ciudad solo puede contener letras.";
-            document.getElementById("city-help").hidden = false;
-        }
     }
 }
 
