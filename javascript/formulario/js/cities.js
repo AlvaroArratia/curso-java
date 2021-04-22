@@ -449,10 +449,9 @@ for (var i = 0; i < CITIES.length; i++) {
 document.getElementById("state").innerHTML = output;
 
 function fillCities() {
-    console.log("hola");
     for (var j = 0; j < CITIES.length; j++) {
         if (CITIES[j].region == document.getElementById("state").value) {
-            var output = '<option selected disabled value="">Seleccionar región...</option>';
+            var output = '<option selected disabled value="">Seleccionar ciudad...</option>';
             for (var z = 0; z < CITIES[j].comunas.length; z++) {
                 output += '<option>' + CITIES[j].comunas[z] + '</option>';
             }

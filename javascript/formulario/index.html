@@ -44,7 +44,7 @@
     </nav>
     <div class="container mh-100 mt-4 mb-4 p-4 border border-2 border-secondary shadow-lg p-3 
     mb-4 bg-body rounded bg-transparent">
-        <h1 class="text-center mt-1 mb-4">Se parte de nuestra familia</h1>
+        <h1 class="text-center mt-1 mb-4">Sea parte de nuestra familia</h1>
         <form>
             <div class="row g-3 mb-3">
                 <div class="col-md-6">
@@ -84,17 +84,13 @@
                 </div>
                 <div class="col-md-4">
                     <label for="state" class="form-label">Región *</label>
-                    <select class="form-select  border border-secondary" id="state" onchange="fillCities()">
-
-                    </select>
+                    <select class="form-select  border border-secondary" id="state" onchange="fillCities()"></select>
                     <div id="state-help" class="alert alert-danger mt-1 text-end" hidden>Debe seleccionar una opción.
                     </div>
                 </div>
                 <div class="col-md-4">
                     <label for="city" class="form-label">Ciudad *</label>
-                    <select class="form-select  border border-secondary" id="city">
-
-                    </select>
+                    <select class="form-select  border border-secondary" id="city"></select>
                     <div id="city-help" class="alert alert-danger mt-1 text-end" hidden>Debe seleccionar una opción.
                     </div>
                 </div>
@@ -104,20 +100,58 @@
                     <div id="zip-code-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este campo.
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col mb-3">
+                <div class="col-md-6">
+                    <label for="address" class="form-label">Dirección *</label>
+                    <input type="text" class="form-control border border-secondary" id="address">
+                    <div id="address-help" class="form-text text-dark text-end" hidden>La contraseña debe tener
+                        entre 8 y 16 caracteres, al menos una mayuscula y no debe contener simbolos.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="address-num" class="form-label">Número *</label>
+                    <input type="text" class="form-control border border-secondary" id="address-num">
+                    <div id="address-num-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este
+                        campo.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="address-extra" class="form-label">Block/Edificio</label>
+                    <input type="text" class="form-control border border-secondary" id="address-extra">
+                    <div id="address-extra-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este
+                        campo.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="address-num" class="form-label">Departamento</label>
+                    <input type="text" class="form-control border border-secondary" id="address-num">
+                    <div id="address-num-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este
+                        campo.
+                    </div>
+                </div>
+                <div class="col-md-6">
                     <label for="password" class="form-label">Contraseña *</label>
                     <input type="password" class="form-control border border-secondary" id="password">
                     <div id="password-help" class="form-text text-dark text-end">La contraseña debe tener
                         entre 8 y 16 caracteres, al menos una mayuscula y no debe contener simbolos.
                     </div>
                 </div>
-                <div class="col mb-3">
+                <div class="col-md-6">
                     <label for="password-repeat" class="form-label">Repita su contraseña *</label>
                     <input type="password" class="form-control border border-secondary" id="password-repeat">
                     <div id="password-repeat-help" class="alert alert-danger mt-1 text-end" hidden>Debe completar este
                         campo.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="account-type" class="form-label">Tipo de cuenta *</label>
+                    <select class="form-select  border border-secondary" id="account-type">
+                        <option selected disabled value="">Seleccionar tipo de cuenta...</option>
+                        <option>Cuenta vista</option>
+                        <option>Cuenta corriente</option>
+                        <option>Cuenta de ahorros</option>
+                    </select>
+                    <div id="account-type-help" class="alert alert-danger mt-1 text-end" hidden>Debe seleccionar una
+                        opción.
                     </div>
                 </div>
             </div>
