@@ -25,15 +25,31 @@ function validateNames() {
     }
 }
 
+function calculateDniDigit(dniNumbers) {
+    var M = 0,
+        S = 1;
+    for (; dniNumbers; dniNumbers = Math.floor(dniNumbers / 10)) {
+        S = (S + dniNumbers % 10 * (9 - M++ % 6)) % 11;
+    }
+    return S ? S - 1 : 'k';
+}
+
 function validateDni() {
     if (document.getElementById("dni").value === "") {
+        document.getElementById("dni-help").textContent = "Debe ingresar su rut sin puntos y con guion.";
         document.getElementById("dni-help").className = "alert alert-danger text-end";
     } else {
         document.getElementById("dni-help").className = "form-text text-dark text-end";
         var dni = document.getElementById("dni").value;
+        var separateDni = dni.split("-");
         var regex = /^\d{1,2}\d{3}\d{3}[-][0-9kK]{1}$/;
         if (!regex.test(dni)) {
             document.getElementById("dni-help").className = "alert alert-danger text-end";
+        } else if (calculateDniDigit(parseInt(separateDni[0])) !== separateDni[1]) {
+            document.getElementById("dni-help").textContent = "Rut no valido.";
+            document.getElementById("dni-help").className = "alert alert-danger text-end";
+        } else {
+            document.getElementById("dni-help").textContent = "Debe ingresar su rut sin puntos y con guion.";
         }
     }
 }
@@ -115,14 +131,25 @@ function validateZipCode() {
     }
 }
 
-function passCoincidence() {
-    var pass = document.getElementById("password").value;
+function validatePassword() {
     var passRepeat = document.getElementById("password-repeat").value;
-
     if (document.getElementById("password").value === "") {
+        document.getElementById("password-help").textContent = "Debe completar este campo.";
+        document.getElementById("password-help").className = "alert alert-danger text-end";
         document.getElementById("password-help").hidden = false;
     } else {
         document.getElementById("password-help").hidden = true;
+        var pass = document.getElementById("password").value;
+        var regex = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+        if (!regex.test(pass)) {
+            document.getElementById("password-help").textContent = "La contraseña debe tener entre 8 y 16 caracteres, " +
+                "al menos una mayuscula y no debe contener simbolos.";
+            document.getElementById("password-help").className = "alert alert-danger text-end";
+            document.getElementById("password-help").hidden = false;
+        } else {
+            document.getElementById("password-help").className = "form-text text-dark text-end";
+            document.getElementById("password-help").hidden = false;
+        }
     }
 
     if (document.getElementById("password-repeat").value === "") {
@@ -160,6 +187,6 @@ function validations() {
     validateCity();
     validateRegion();
     validateZipCode();
-    passCoincidence();
+    validatePassword();
     validateTerms();
 }
