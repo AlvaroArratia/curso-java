@@ -1,29 +1,50 @@
-function validateNames() {
-    var regex = /^([A-ZÁÉÍÓÚa-zñáéíóú]+[\s].*)+$/;
-    var name = document.getElementById("name").value;
-    if (name.trim() === "") {
-        document.getElementById("name-help").textContent = "Debe completar este campo.";
-        document.getElementById("name-help").hidden = false;
-    } else if (name.trim() !== "") {
-        if (!regex.test(name)) {
-            document.getElementById("name-help").textContent = "El nombre solo puede contener letras.";
-            document.getElementById("name-help").hidden = false;
-        } else if (regex.test(name)) {
-            document.getElementById("name-help").hidden = true;
+function validateLetters(string, idHelper) {
+    var regex = /^([A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+$/;
+    if (string.trim() === "") {
+        document.getElementById(idHelper).textContent = "Debe completar este campo.";
+        document.getElementById(idHelper).className = "alert alert-danger mt-1 text-end";
+        document.getElementById(idHelper).hidden = false;
+    } else if (string.trim() !== "") {
+        if (!regex.test(string)) {
+            document.getElementById(idHelper).textContent = "Este campo solo puede contener letras.";
+            document.getElementById(idHelper).className = "alert alert-danger mt-1 text-end";
+            document.getElementById(idHelper).hidden = false;
+        } else if (regex.test(string)) {
+            document.getElementById(idHelper).hidden = true;
         }
     }
+}
 
-    var lastName = document.getElementById("last-name").value;
-    if (lastName.trim() === "") {
-        document.getElementById("last-name-help").textContent = "Debe completar este campo.";
-        document.getElementById("last-name-help").hidden = false;
-    } else if (lastName.trim() !== "") {
-        if (!regex.test(lastName)) {
-            document.getElementById("last-name-help").textContent = "El apellido solo puede contener letras.";
-            document.getElementById("last-name-help").hidden = false;
-        } else if (regex.test(lastName)) {
-            document.getElementById("last-name-help").hidden = true;
+function validateNumbers(stringNumbers, idHelper, required) {
+    var regex = /^([0-9])*$/;
+    if (stringNumbers === "" && required) {
+        document.getElementById(idHelper).textContent = "Debe completar este campo.";
+        document.getElementById(idHelper).className = "alert alert-danger mt-1 text-end";
+        document.getElementById(idHelper).hidden = false;
+    } else if (stringNumbers !== "") {
+        if (!regex.test(stringNumbers)) {
+            document.getElementById(idHelper).textContent = "Este campo solo puede contener números.";
+            document.getElementById(idHelper).className = "alert alert-danger mt-1 text-end";
+            document.getElementById(idHelper).hidden = false;
+        } else if (regex.test(stringNumbers)) {
+            document.getElementById(idHelper).hidden = true;
         }
+    }
+}
+
+function dateDiff(birthDate) {
+    var dateStart = new Date(birthDate);
+    var dateEnd = new Date();
+    var dateDiff = dateEnd - dateStart;
+    var yearDiff = Math.floor(dateDiff / (1000 * 60 * 60 * 24 * 30 * 12));
+    return yearDiff;
+}
+
+function validateSelects(id, idHelper) {
+    if (document.getElementById(id).value === "") {
+        document.getElementById(idHelper).hidden = false;
+    } else {
+        document.getElementById(idHelper).hidden = true;
     }
 }
 
@@ -38,6 +59,7 @@ function calculateDniDigit(dniNumbers) {
 
 function validateDni() {
     var dni = document.getElementById("dni").value;
+
     if (dni === "") {
         document.getElementById("dni-help").textContent = "Debe ingresar su rut sin puntos y con guion.";
         document.getElementById("dni-help").className = "alert alert-danger mt-1 text-end";
@@ -54,14 +76,6 @@ function validateDni() {
             document.getElementById("dni-help").className = "form-text text-dark text-end";
         }
     }
-}
-
-function dateDiff(birthDate) {
-    var dateStart = new Date(birthDate);
-    var dateEnd = new Date();
-    var dateDiff = dateEnd - dateStart;
-    var yearDiff = Math.floor(dateDiff / (1000 * 60 * 60 * 24 * 30 * 12));
-    return yearDiff;
 }
 
 function validateBirthDate() {
@@ -115,30 +129,6 @@ function validateEmail() {
     }
 }
 
-function validateSelects(id, idHelper) {
-    if (document.getElementById(id).value === "") {
-        document.getElementById(idHelper).hidden = false;
-    } else {
-        document.getElementById(idHelper).hidden = true;
-    }
-}
-
-function validateZipCode() {
-    var zipCode = document.getElementById("zip-code").value;
-    if (zipCode === "") {
-        document.getElementById("zip-code-help").textContent = "Debe completar este campo.";
-        document.getElementById("zip-code-help").hidden = false;
-    } else if (zipCode !== "") {
-        var regex = /^([0-9])*$/;
-        if (!regex.test(zipCode)) {
-            document.getElementById("zip-code-help").textContent = "El codigo postal solo puede contener números.";
-            document.getElementById("zip-code-help").hidden = false;
-        } else if (regex.test(zipCode)) {
-            document.getElementById("zip-code-help").hidden = true;
-        }
-    }
-}
-
 function validatePassword() {
     var pass = document.getElementById("password").value;
     var itPass = false;
@@ -185,65 +175,24 @@ function validateTerms() {
     }
 }
 
-function validateAddress() {
-    var address = document.getElementById("address").value;
-    if (address.trim() === "") {
-        document.getElementById("address-help").textContent = "Debe completar este campo.";
-        document.getElementById("address-help").hidden = false;
-    } else if (address.trim() !== "") {
-        var regex = /^([A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+$/;
-        if (!regex.test(address)) {
-            document.getElementById("address-help").textContent = "Dirección no valida.";
-            document.getElementById("address-help").hidden = false;
-        } else if (regex.test(address)) {
-            document.getElementById("address-help").hidden = true;
-        }
-    }
-
-    var regex = /^([0-9])*$/;
-    var number = document.getElementById("address-num").value;
-    if (number === "") {
-        document.getElementById("address-num-help").textContent = "Debe completar este campo.";
-        document.getElementById("address-num-help").hidden = false;
-    } else if (number !== "") {
-        if (!regex.test(number)) {
-            document.getElementById("address-num-help").textContent = "El campo solo puede contener números.";
-            document.getElementById("address-num-help").hidden = false;
-        } else if (regex.test(number)) {
-            document.getElementById("address-num-help").hidden = true;
-        }
-    }
-
-    var block = document.getElementById("address-block").value;
-    if (block !== "") {
-        if (!regex.test(block)) {
-            document.getElementById("address-block-help").hidden = false;
-        } else if (regex.test(block)) {
-            document.getElementById("address-block-help").hidden = true;
-        }
-    }
-
-    var dpto = document.getElementById("address-dpto").value;
-    if (dpto !== "") {
-        if (!regex.test(dpto)) {
-            document.getElementById("address-dpto-help").hidden = false;
-        } else if (regex.test(dpto)) {
-            document.getElementById("address-dpto-help").hidden = true;
-        }
-    }
-}
-
 function validations() {
-    validateNames();
+    validateLetters(document.getElementById("name").value, "name-help");
+    validateLetters(document.getElementById("last-name").value, "last-name-help");
+    validateLetters(document.getElementById("address").value, "address-help");
+
+    validateNumbers(document.getElementById("zip-code").value, "zip-code-help", true);
+    validateNumbers(document.getElementById("address-num").value, "address-num-help", true);
+    validateNumbers(document.getElementById("address-block").value, "address-block-help", false);
+    validateNumbers(document.getElementById("address-dpto").value, "address-dpto-help", false);
+
+    validateSelects("state", "state-help");
+    validateSelects("city", "city-help");
+    validateSelects("account-type", "account-type-help");
+
     validateDni();
     validateBirthDate();
     validateCelphone();
     validateEmail();
-    validateSelects("state", "state-help");
-    validateSelects("city", "city-help");
-    validateZipCode();
-    validateAddress();
     validatePassword();
-    validateSelects("account-type", "account-type-help");
     validateTerms();
 }
