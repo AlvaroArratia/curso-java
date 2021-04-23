@@ -1,10 +1,10 @@
 function validateNames() {
+    var regex = /^([A-ZÁÉÍÓÚa-zñáéíóú]+[\s].*)+$/;
     var name = document.getElementById("name").value;
     if (name.trim() === "") {
         document.getElementById("name-help").textContent = "Debe completar este campo.";
         document.getElementById("name-help").hidden = false;
     } else if (name.trim() !== "") {
-        var regex = /^[A-Za-z ]+$/;
         if (!regex.test(name)) {
             document.getElementById("name-help").textContent = "El nombre solo puede contener letras.";
             document.getElementById("name-help").hidden = false;
@@ -18,7 +18,6 @@ function validateNames() {
         document.getElementById("last-name-help").textContent = "Debe completar este campo.";
         document.getElementById("last-name-help").hidden = false;
     } else if (lastName.trim() !== "") {
-        var regex = /^[A-Za-z ]+$/;
         if (!regex.test(lastName)) {
             document.getElementById("last-name-help").textContent = "El apellido solo puede contener letras.";
             document.getElementById("last-name-help").hidden = false;
@@ -164,7 +163,7 @@ function validatePassword() {
         document.getElementById("password-repeat-help").hidden = false;
     } else if (passRepeat !== "") {
         if (pass === passRepeat && itPass) {
-            document.getElementById("password-repeat-help").className = "alert alert-success text-end";
+            document.getElementById("password-repeat-help").className = "alert alert-success mt-1 text-end";
             document.getElementById("password-repeat-help").textContent = "Las contraseñas coinciden.";
             document.getElementById("password-repeat-help").hidden = false;
         } else if (pass === passRepeat && !itPass) {
@@ -186,6 +185,54 @@ function validateTerms() {
     }
 }
 
+function validateAddress() {
+    var address = document.getElementById("address").value;
+    if (address.trim() === "") {
+        document.getElementById("address-help").textContent = "Debe completar este campo.";
+        document.getElementById("address-help").hidden = false;
+    } else if (address.trim() !== "") {
+        var regex = /^([A-ZÁÉÍÓÚa-zñáéíóú]+[\s]*)+$/;
+        if (!regex.test(address)) {
+            document.getElementById("address-help").textContent = "Dirección no valida.";
+            document.getElementById("address-help").hidden = false;
+        } else if (regex.test(address)) {
+            document.getElementById("address-help").hidden = true;
+        }
+    }
+
+    var regex = /^([0-9])*$/;
+    var number = document.getElementById("address-num").value;
+    if (number === "") {
+        document.getElementById("address-num-help").textContent = "Debe completar este campo.";
+        document.getElementById("address-num-help").hidden = false;
+    } else if (number !== "") {
+        if (!regex.test(number)) {
+            document.getElementById("address-num-help").textContent = "El campo solo puede contener números.";
+            document.getElementById("address-num-help").hidden = false;
+        } else if (regex.test(number)) {
+            document.getElementById("address-num-help").hidden = true;
+        }
+    }
+
+    var block = document.getElementById("address-block").value;
+    if (block !== "") {
+        if (!regex.test(block)) {
+            document.getElementById("address-block-help").hidden = false;
+        } else if (regex.test(block)) {
+            document.getElementById("address-block-help").hidden = true;
+        }
+    }
+
+    var dpto = document.getElementById("address-dpto").value;
+    if (dpto !== "") {
+        if (!regex.test(dpto)) {
+            document.getElementById("address-dpto-help").hidden = false;
+        } else if (regex.test(dpto)) {
+            document.getElementById("address-dpto-help").hidden = true;
+        }
+    }
+}
+
 function validations() {
     validateNames();
     validateDni();
@@ -195,6 +242,7 @@ function validations() {
     validateSelects("state", "state-help");
     validateSelects("city", "city-help");
     validateZipCode();
+    validateAddress();
     validatePassword();
     validateSelects("account-type", "account-type-help");
     validateTerms();
