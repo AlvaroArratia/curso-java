@@ -116,13 +116,15 @@ function maxMinAvg(array) {
     var min = array[0];
     var sum = 0;
     for (var i = 0; i < array.length; i++) {
-        if (array[i] > max) {
+        max = array[i] > max ? array[i] : max;
+        /*if (array[i] > max) {
             max = array[i];
-        }
+        }*/
 
-        if (array[i] < min) {
+        min = array[i] < min ? array[i] : min;
+        /*if (array[i] < min) {
             min = array[i];
-        }
+        }*/
 
         sum += array[i];
     }

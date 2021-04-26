@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body style="background-image: url('img/backgound.jpg');background-size: cover;">
@@ -116,13 +117,15 @@
                 <div class="col-md-2">
                     <label for="address-block" class="form-label"> N° de Block/Edificio</label>
                     <input type="text" class="form-control border border-secondary" id="address-block">
-                    <div id="address-block-help" class="alert alert-danger mt-1 text-end" hidden>El campo solo puede contener números.
+                    <div id="address-block-help" class="alert alert-danger mt-1 text-end" hidden>El campo solo puede
+                        contener números.
                     </div>
                 </div>
                 <div class="col-md-2">
                     <label for="address-dpto" class="form-label">N° de departamento</label>
                     <input type="text" class="form-control border border-secondary" id="address-dpto">
-                    <div id="address-dpto-help" class="alert alert-danger mt-1 text-end" hidden>El campo solo puede contener números.
+                    <div id="address-dpto-help" class="alert alert-danger mt-1 text-end" hidden>El campo solo puede
+                        contener números.
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -167,9 +170,28 @@
                     Para poder registrar sus datos debe aceptar los terminos.
                 </div>
             </div>
-            <button type="button" class="btn btn-outline-danger" onclick="validations()">Registrarse</button>
+            <button id="submit-button" type="button" class="btn btn-outline-danger"
+                onclick="validations()">Registrarse</button>
         </form>
     </div>
+
+    <div class="modal" tabindex="-1" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">¡Se ha registrado con exito!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-body">Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/cities.js"></script>
     <script src="js/validations.js"></script>
 </body>
