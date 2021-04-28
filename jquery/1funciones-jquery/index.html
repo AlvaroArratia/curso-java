@@ -17,24 +17,47 @@
 </head>
 
 <body>
+    <h1 class="text-center mt-4 ">Some JQuery Functions</h1>
     <div class="container">
         <div class="row mt-4 align-items-center">
             <div class="col col-2 d-flex justify-content-center">
-                <button id="addclass" class="btn btn-primary">AddClass</button>
+                <button id="addclass" class="btn btn-primary">Add Class</button>
             </div>
             <div class="col col-10 p-3">
-                <h1>AddClass</h1>
+                <h1>Add Class</h1>
                 <p id="addclass-p">Click the button to add class "red" to this paragraph</p>
             </div>
         </div>
         <hr>
         <div class="row mt-4 align-items-center">
             <div class="col col-2 d-flex justify-content-center">
-                <button id="slidetoggle" class="btn btn-primary">Slidetoggle</button>
+                <button id="slideup" class="btn btn-secondary">Slide up</button>
             </div>
             <div class="col col-8 p-3">
-                <h1>Slidetoggle</h1>
-                <p>Click the button to slidetoggle a hidden image</p>
+                <h1>Slide up</h1>
+                <p>Click the button to slide up that image</p>
+            </div>
+            <img id="slide-img" class="col col-2" src="img/download.jpg" alt="atacama">
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="slidedown" class="btn btn-primary">Slide down</button>
+            </div>
+            <div class="col col-8 p-3">
+                <h1>Slide down</h1>
+                <p>Click the button to slide down that image</p>
+            </div>
+            <img id="slidedown-img" class="col col-2" src="img/download.jpg" alt="atacama" style="display: none;">
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="slidetoggle" class="btn btn-secondary">Slide toggle</button>
+            </div>
+            <div class="col col-8 p-3">
+                <h1>Slide toggle</h1>
+                <p>Click the button to slide toggle the image</p>
             </div>
             <img id="hidden-img" class="col col-2" src="img/download.jpg" alt="atacama">
         </div>
@@ -46,6 +69,115 @@
             <div class="col col-10 p-3">
                 <h1>Append</h1>
                 <p id="append-p">Click the button to append a new paragraph!</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="hide-btn" class="btn btn-secondary m-1">Hide</button>
+                <button id="show-btn" class="btn btn-primary m-1">Show</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1>Hide & Show</h1>
+                <p id="hide-p">Click the "Hide" button to hide this paragraph and click the "Show" button to show it
+                    again</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="toggle-btn" class="btn btn-primary">Toggle</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1 id="toggle-h1">Toggle</h1>
+                <p id="toggle-p">Click the button to hide/show all text</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="text-btn" class="btn btn-secondary">Text</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1 id="text-h1">Text</h1>
+                <p>Click the button to change the title</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="fadeout-btn" class="btn btn-primary">Fade out</button>
+            </div>
+            <div class="col col-8 p-3">
+                <h1>Fade out</h1>
+                <p>Click the button to fade out the image</p>
+            </div>
+            <img id="fadeout-img" class="col col-2" src="img/download.jpg" alt="atacama">
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="fadein-btn" class="btn btn-secondary">Fade in</button>
+            </div>
+            <div class="col col-8 p-3">
+                <h1>Fade in</h1>
+                <p>Click the button to fade in the image</p>
+            </div>
+            <img id="fadein-img" class="col col-2" src="img/download.jpg" alt="atacama" style="display: none;">
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="before-btn" class="btn btn-primary">Before</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1>Before</h1>
+                <p id="before-p">Click the button to put content before this paragraph</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="after-btn" class="btn btn-secondary">After</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1>After</h1>
+                <p id="after-p">Click the button to put content after this paragraph</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="html-btn" class="btn btn-primary">HTML</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1>HTML</h1>
+                <p id="html-p">Click de button to get this paragraph content</p>
+                <p id="html-p2"></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="attr-btn" class="btn btn-secondary">Attr</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1>Attr</h1>
+                <p>Click the button to get an attribute value (class in this case)</p>
+                <p id="attr-p"></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row mt-4 align-items-center mb-4">
+            <div class="col col-2 d-flex justify-content-center">
+                <button id="val-btn" class="btn btn-primary">Val</button>
+            </div>
+            <div class="col col-10 p-3">
+                <h1>Val</h1>
+                <textarea class="border border-4" name="textarea" id="textarea-val" cols="30" rows="10"></textarea>
+                <p>Click the button to get the value of a form element (textarea in this case). You can write something,
+                    then click the button</p>
+                <p id="val-p"></p>
             </div>
         </div>
     </div>
