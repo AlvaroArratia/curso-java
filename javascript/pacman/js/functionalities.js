@@ -5,6 +5,30 @@ var blockTypes = {
     3: "cherry"
 }
 
+var pacmanPos = {
+    x: 1,
+    y: 1
+}
+var pacmanLeftValue = 83;
+var pacmanTopValue = 85;
+
+var pacmanTwoPos = {
+    x: 1,
+    y: 5
+}
+var pacmanTwoLeftValue = 83;
+var pacmanTwoTopValue = 425;
+
+var pacmanLife = 5;
+var pacmanPoints = 0;
+
+var ghostPos = {
+    x: 9,
+    y: 5
+}
+var ghostLeftValue = 747;
+var ghostTopValue = 425;
+
 var world = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 0, 2, 2, 2, 3, 2, 2, 2, 2, 1],
@@ -41,32 +65,8 @@ function drawWorld() {
 
 drawWorld();
 
-var pacmanLife = 5;
-var pacmanPoints = 0;
-
 document.getElementById("lifes").innerText = "Lifes: " + pacmanLife;
 document.getElementById("score").innerText = "Score: " + pacmanPoints;
-
-var pacmanPos = {
-    x: 1,
-    y: 1
-}
-var pacmanLeftValue = 83;
-var pacmanTopValue = 85;
-
-var pacmanTwoPos = {
-    x: 1,
-    y: 5
-}
-var pacmanTwoLeftValue = 83;
-var pacmanTwoTopValue = 425;
-
-var ghostPos = {
-    x: 9,
-    y: 5
-}
-var ghostLeftValue = 747;
-var ghostTopValue = 425;
 
 function displayCharacters() {
     document.getElementById("pacman").style.left = pacmanLeftValue + "px";

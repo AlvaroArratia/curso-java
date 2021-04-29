@@ -2,6 +2,7 @@
 .vscode
 intro/
 node_modules/
+apresto/
 
 respuestas_desafios.js
 *.rar
