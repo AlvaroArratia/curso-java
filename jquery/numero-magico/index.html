@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <div class="container pt-5 full-height bg-warning">
         <h1 class="row justify-content-center dark-orange-text  mb-5">El número magico</h1>
         <form class="row width-1 m-auto p-5 border border-3 shadow-lg rounded">
@@ -28,10 +29,12 @@
                 <option value="hard">Difícil</option>
             </select>
             <button id="btn-difficulty" type="button" class="btn btn-outline-secondary mb-4">Seleccionar</button>
-            <p id="lifes-info" class="text-center">Intentos: </p>
-            <p id="num-info" class="text-center"></p>
             <input id="player-num" type="number" class="mb-2">
             <button id="send-num" type="button" class="btn btn-outline-secondary mb-2">Voy a tener suerte</button>
+
+            <p id="lifes-info" class="text-center alert alert-warning">Intentos: 0</p>
+            <p id="num-info" class="text-center alert alert-danger" role="alert"><span></span></p>
+
             <button id="restart" type="button" class="btn btn-outline-secondary">Jugar de nuevo</button>
         </form>
     </div>
