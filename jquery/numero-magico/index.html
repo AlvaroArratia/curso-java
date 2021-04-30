@@ -19,38 +19,20 @@
 </head>
 
 <body>
-    <div class="container full-height bg-warning">
-        <nav class="navbar navbar-light border-bottom">
-            <div class="container">
-                <a class="navbar-brand" href="#">El número magico</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <h1 class="text-center mt-4 mb-4">El número magico</h1>
-        <form class="width-1 text-center m-auto p-5 border border-3 shadow-lg rounded">
-            <h2 class="text-center dark-orange-text">Elige la dificultad</h2><br>
-            <p>asasd</p>
-            <select name="difficulty" id="difficulty">
+    <div class="container pt-5 full-height bg-warning">
+        <h1 class="row justify-content-center dark-orange-text  mb-5">El número magico</h1>
+        <form class="row width-1 m-auto p-5 border border-3 shadow-lg rounded">
+            <h2 class="text-center dark-orange-text mb-4">Elige la dificultad</h2>
+            <select name="difficulty" id="difficulty" class="form-select mb-2">
                 <option value="easy">Fácil</option>
                 <option value="hard">Difícil</option>
-            </select><br>
-            <input type="text"><br>
-            <button type="button" class="btn btn-outline-secondary">Seleccionar</button>
-            <button type="button" class="btn btn-outline-secondary">Voy a tener suerte</button>
+            </select>
+            <button id="btn-difficulty" type="button" class="btn btn-outline-secondary mb-4">Seleccionar</button>
+            <p id="lifes-info" class="text-center">Intentos: </p>
+            <p id="num-info" class="text-center"></p>
+            <input id="player-num" type="number" class="mb-2">
+            <button id="send-num" type="button" class="btn btn-outline-secondary mb-2">Voy a tener suerte</button>
+            <button id="restart" type="button" class="btn btn-outline-secondary">Jugar de nuevo</button>
         </form>
     </div>
 </body>

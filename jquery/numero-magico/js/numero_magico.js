@@ -59,14 +59,23 @@ class MagicNumber {
 
     matchNumber(userNumber) {
         const MATCH = 0,
-            NOT_MATCH_UP = 1,
-            NOT_MATCH_DOWN = 2;
-        if (userNumber == this.magicNumber) {
+            GRATER_THAN = 1,
+            LESS_THAN = 2,
+            NOT_A_NUMBER = 3;
+        if (userNumber === this.magicNumber) {
             return MATCH;
         } else if (userNumber > this.magicNumber) {
-            return NOT_MATCH_DOWN;
+            return LESS_THAN;
         } else if (userNumber < this.magicNumber) {
-            return NOT_MATCH_UP;
+            return GRATER_THAN;
+        } else {
+            return NOT_A_NUMBER;
         }
+    }
+
+    resetAll() {
+        this.difficulty = "";
+        this.magicNumber = 0;
+        this.playerLifes = 0;
     }
 }
