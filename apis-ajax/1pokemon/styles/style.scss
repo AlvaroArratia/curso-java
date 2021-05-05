@@ -1,0 +1,57 @@
+@import "header/header.scss";
+
+$background-color: rgb(0, 0, 34);
+$border-color: white;
+$columns: 12;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li {
+    list-style-position: inside;
+}
+
+.list-item {
+    background-color: $background-color;
+    color: white;
+    border: 3px solid $border-color;
+    border-radius: 15px;
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    background-image: url("https://i.pinimg.com/originals/66/89/dc/6689dc331be27e66349ce9a4d15ddff3.gif");
+    background-size: 140px;
+    padding: 20px 60px 20px 60px;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    width: 90%;
+    margin: auto;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+@for $width from 1 through $columns {
+    .col-#{$width} {
+        flex-basis: $width / $columns * 100%;
+    }
+}

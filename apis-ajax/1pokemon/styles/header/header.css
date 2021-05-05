@@ -1,0 +1,41 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav img {
+  width: 150px;
+}
+
+.nav button {
+  border: 3px solid black;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  margin: 10px;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav .yellow-btn {
+  border-color: #ffcb05;
+  color: #ffcb05;
+}
+
+.nav .yellow-btn:hover {
+  background-color: #ffcb05;
+  border-color: #000022;
+  color: white;
+}
+/*# sourceMappingURL=header.css.map */
