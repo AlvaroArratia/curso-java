@@ -1,36 +1,52 @@
+$dark_blue: rgb(0, 0, 34);
+$blue: rgb(53, 100, 174);
 $yellow: rgb(255, 203, 5);
+$white: white;
 
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
+    background-color: $yellow;
 
     img {
         width: 150px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
-    button {
+    .btn {
         border: 3px solid black;
         border-radius: 15px;
-        background-color: white;
-        color: black;
-        margin: 10px;
-        padding: 14px 28px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .yellow-btn {
-        border-color: $yellow;
-        color: $yellow;
-    }
-
-    .yellow-btn:hover {
         background-color: $yellow;
-        border-color: rgb(0, 0, 34);
-        color: white;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 14px 28px;
+        font-size: 14px;
     }
 
+    .blue-btn {
+        border-color: $blue;
+        color: $blue;
 
+        &:hover {
+            background-color: $blue;
+            border-color: $dark_blue;
+            color: white;
+        }
+    }
+
+    form {
+        flex-wrap: nowrap;
+
+        .text-input {
+            text-align: center;
+            height: 35px;
+            border: 1px solid $blue;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
 }

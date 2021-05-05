@@ -1,61 +1,8 @@
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav img {
-  width: 150px;
-}
-
-.nav button {
-  border: 3px solid black;
-  border-radius: 15px;
-  background-color: white;
-  color: black;
-  margin: 10px;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.nav .yellow-btn {
-  border-color: #ffcb05;
-  color: #ffcb05;
-}
-
-.nav .yellow-btn:hover {
-  background-color: #ffcb05;
-  border-color: #000022;
-  color: white;
-}
-
 * {
   margin: 0;
   padding: 0;
   border: 0;
-}
-
-li {
-  list-style-position: inside;
-}
-
-.list-item {
-  background-color: #000022;
-  color: white;
-  border: 3px solid white;
-  border-radius: 15px;
-  margin: 5px 0px 5px 0px;
-  padding: 10px;
+  font-family: sans-serif;
 }
 
 .container {
@@ -69,30 +16,8 @@ li {
   background-color: #000022;
   background-image: url("https://i.pinimg.com/originals/66/89/dc/6689dc331be27e66349ce9a4d15ddff3.gif");
   background-size: 140px;
-  padding: 20px 60px 20px 60px;
-}
-
-.container-fluid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #000022;
-  width: 90%;
-  margin: auto;
-}
-
-.col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding: 20px 80px 20px 80px;
+  min-height: 100vh;
 }
 
 .row {
@@ -103,6 +28,26 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .col-1 {
@@ -163,5 +108,89 @@ li {
 .col-12 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+}
+
+li {
+  list-style-position: inside;
+}
+
+.list-item {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #000022;
+  color: white;
+  border: 3px solid white;
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+  padding: 10px;
+}
+
+.list-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.box {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #000022;
+  color: white;
+  border: 3px solid white;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+  min-width: 150px;
+  width: 150px;
+  height: 150px;
+  font-weight: bold;
+  background-image: url("http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png");
+  background-size: cover;
+}
+
+.box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.box #pkm-name {
+  text-align: start;
+}
+
+.box #pkm-num {
+  text-align: end;
+}
+
+.box-large {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #000022;
+  color: white;
+  border: 3px solid white;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+  width: 150px;
+  height: 150px;
+  background-image: url("http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png");
+  background-size: cover;
+}
+
+.box-large:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.green-box {
+  color: darkgreen;
+  border-color: darkviolet;
+  background-color: lightgreen;
+}
+
+.red-box {
+  color: red;
+  border-color: red;
+  background-color: lightsalmon;
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,22 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header/header.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js">
+    </script>
+    <script src="js/functions.js"></script>
 </head>
 
 <body>
     <nav class="nav">
-        <button class="btn yellow-btn">btn1</button>
         <img src="img/Pokémon-Logo.png" alt="pokemon.png">
-        <button class="btn yellow-btn">btn2</button>
+        <button class="btn blue-btn">btn2</button>
+        <button class="btn blue-btn">btn1</button>
+        <form action="">
+            <input class="text-input" type="text" placeholder="Buscar pokemon por id">
+            <!--<input class="btn blue-btn" type="button" value="Buscar">-->
+        </form>
     </nav>
     <div class="container">
-        <ol>
-            <li class="list-item">alo</li>
-            <li class="list-item">alo</li>
-            <li class="list-item">alo</li>
-            <li class="list-item">alo</li>
-            <li class="list-item">alo</li>
-        </ol>
+        <div id="pokemons" class="row space-around">
+
+            <!--<div class="col col-3">
+                
+            </div>
+            <div class="col col-3">alo</div>
+            <div class="col col-3">alo</div>
+            <div class="col col-3">alo</div>
+            <div class="box">
+                <span id="pkm-name">Nombre</span>
+                <span id="pkm-num">Número</span>
+            </div>-->
+        </div>
     </div>
 </body>
 

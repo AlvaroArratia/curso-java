@@ -6,36 +6,52 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ffcb05;
 }
 
 .nav img {
   width: 150px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.nav button {
+.nav .btn {
   border: 3px solid black;
   border-radius: 15px;
-  background-color: white;
-  color: black;
-  margin: 10px;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.nav .yellow-btn {
-  border-color: #ffcb05;
-  color: #ffcb05;
-}
-
-.nav .yellow-btn:hover {
   background-color: #ffcb05;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 14px 28px;
+  font-size: 14px;
+}
+
+.nav .blue-btn {
+  border-color: #3564ae;
+  color: #3564ae;
+}
+
+.nav .blue-btn:hover {
+  background-color: #3564ae;
   border-color: #000022;
   color: white;
+}
+
+.nav form {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.nav form .text-input {
+  text-align: center;
+  height: 35px;
+  border: 1px solid #3564ae;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 /*# sourceMappingURL=header.css.map */
