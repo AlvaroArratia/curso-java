@@ -12,6 +12,7 @@ $columns: 12;
     padding: 0;
     border: 0;
     font-family: sans-serif;
+    text-decoration: none;
     //outline: 1px solid red;
 }
 
@@ -117,6 +118,12 @@ li {
 ////////////////////////////////////
 
 ///////////Temas de cajas///////////
+.generic-box {
+    color: $white;
+    border-color: yellow;
+    background-color: $dark_blue;
+}
+
 .green-box {
     color: darkgreen;
     border-color: darkviolet;

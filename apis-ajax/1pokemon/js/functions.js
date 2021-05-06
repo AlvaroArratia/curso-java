@@ -1,5 +1,6 @@
 var limit = 20,
     offset = 0;
+var url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
 
 function formatName(name) {
     var firstLetter = name.charAt(0).toUpperCase();
@@ -7,21 +8,32 @@ function formatName(name) {
     return name;
 }
 
-function addHtmlCss(pkmName, pkmNum) {
-    $("#pokemons").append('<div id="' + pkmNum + '" class="pkm box green-box">' +
+function addHtmlCss(pkmName, pkmId) {
+    $("#pokemons").append('<a id="' + pkmId + '" class="pkm box generic-box">' +
         '<span id="pkm-name">' + pkmName + '</span><br>' +
-        '<span id="pkm-num">#' + pkmNum + '</span>' +
-        '</div>');
-    $("#" + pkmNum).css("background-image", "url('http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmNum + ".png')");
+        '<span id="pkm-num">#' + pkmId + '</span>' +
+        '</a>');
+    $("#" + pkmId).css("background-image", "url('http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmId + ".png')");
+}
+
+function getPkmTypes(pkmId) {
+    $.get("https://pokeapi.co/api/v2/pokemon/" + pkmId,
+        function (res) {
+            console.log(res.types);
+            res.types;
+        },
+        "json");
 }
 
 function getPokemons(lastId = 0) {
-    $.get("https://pokeapi.co/api/v2/pokemon?limit=" + limit + "&offset=" + offset, function (res) {
+    $.get(url,
+        function (res) {
             console.log(res.results);
+            url = res.next;
             for (const key in res.results) {
                 var pkmName = formatName(res.results[key].name);
-                var pkmNum = parseInt(key) + 1 + lastId;
-                addHtmlCss(pkmName, pkmNum);
+                var pkmId = parseInt(key) + 1 + lastId;
+                addHtmlCss(pkmName, pkmId);
             }
             offset += 20;
         },
@@ -36,5 +48,9 @@ $(document).ready(function () {
             var lastId = $("#pokemons").children().length;
             getPokemons(lastId);
         }
+    });
+
+    $("#pokemons").on("click", "a.pkm", function () {
+        console.log("alo");
     });
 });

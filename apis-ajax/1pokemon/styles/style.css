@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   font-family: sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -177,6 +178,12 @@ li {
 .box-large:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.generic-box {
+  color: white;
+  border-color: yellow;
+  background-color: #000022;
 }
 
 .green-box {
