@@ -1,43 +1,40 @@
-$(document).ready(function () {
-    var limit = 20,
-        offset = 0;
+var limit = 20,
+    offset = 0;
+
+function formatName(name) {
+    var firstLetter = name.charAt(0).toUpperCase();
+    name = firstLetter + name.slice(1);
+    return name;
+}
+
+function addHtmlCss(pkmName, pkmNum) {
+    $("#pokemons").append('<div id="' + pkmNum + '" class="pkm box green-box">' +
+        '<span id="pkm-name">' + pkmName + '</span><br>' +
+        '<span id="pkm-num">#' + pkmNum + '</span>' +
+        '</div>');
+    $("#" + pkmNum).css("background-image", "url('http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmNum + ".png')");
+}
+
+function getPokemons(lastId = 0) {
     $.get("https://pokeapi.co/api/v2/pokemon?limit=" + limit + "&offset=" + offset, function (res) {
             console.log(res.results);
-            var output = '';
             for (const key in res.results) {
-                var pkmName = res.results[key].name;
-                var pkmNum = parseInt(key) + 1;
-                    output += '<div class="box green-box">' +
-                    '<span id="pkm-name">' + pkmName + '</span><br>' +
-                    '<span id="pkm-num">#' + pkmNum + '</span>' +
-                    '</div>';
+                var pkmName = formatName(res.results[key].name);
+                var pkmNum = parseInt(key) + 1 + lastId;
+                addHtmlCss(pkmName, pkmNum);
             }
-            $("#pokemons").append(output);
-            limit += 20;
             offset += 20;
         },
         "json");
+}
+
+$(document).ready(function () {
+    getPokemons();
 
     $(window).scroll(function () {
-        console.log($(window).scrollTop());
-        console.log($(document).height());
-        //console.log($("ol:last-child").offset().top);
-        if ($(window).scrollTop() >= $("ol:last-child").offset()) {
-            console.log("alo")
-            $.get("https://pokeapi.co/api/v2/pokemon?limit=" + limit + "&offset=" + offset, function (res) {
-                    console.log(res.results);
-                    var output = '';
-                    for (const key in res.results) {
-                        var pkmName = res.results[key].name;
-                        output += '<li class="list-item">' + pkmName + '</li>';
-                    }
-                    $("ol").append(output);
-                    limit += 20;
-                    offset += 20;
-                },
-                "json");
+        if ($(window).scrollTop() >= $(document).height() - $(window).height() - 1) {
+            var lastId = $("#pokemons").children().length;
+            getPokemons(lastId);
         }
     });
-
-
 });

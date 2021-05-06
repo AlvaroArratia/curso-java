@@ -8,9 +8,9 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #ffcb05;
 }
 
@@ -31,6 +31,8 @@
 }
 
 .nav .blue-btn {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
   border-color: #3564ae;
   color: #3564ae;
 }
