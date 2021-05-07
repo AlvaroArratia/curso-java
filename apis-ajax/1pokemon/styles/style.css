@@ -37,6 +37,11 @@ body {
       flex-wrap: wrap;
 }
 
+.no-wrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .space-around {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -169,26 +174,25 @@ li {
   margin: 10px;
   padding: 10px;
   font-size: 14px;
-  width: 200px;
-  height: 200px;
-  background-image: url("http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png");
-  background-size: cover;
+  height: 150px;
+  min-width: 250px;
+  font-weight: bold;
 }
 
 .box-large:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 .generic-box {
   color: white;
-  border-color: yellow;
-  background-color: #000022;
+  border-color: #ffcb05;
+  background-color: #3564ae;
 }
 
 .green-box {
   color: darkgreen;
-  border-color: darkviolet;
+  border-color: darkgreen;
   background-color: lightgreen;
 }
 
@@ -196,5 +200,94 @@ li {
   color: red;
   border-color: red;
   background-color: lightsalmon;
+}
+
+.blue-box {
+  color: #000022;
+  border-color: #000022;
+  background-color: lightblue;
+}
+
+.yellow-box {
+  color: #806600;
+  border-color: #ffcb05;
+  background-color: #ffff83;
+}
+
+.inactive-box {
+  border-color: #ffcb05;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+#pkms-btn {
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png");
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#types-btn {
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ab-btn {
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png");
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#items-btn {
+  background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png");
+  background-size: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 724px) {
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu .box-large {
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width: 725px) {
+  .menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu .box-large {
+    width: 250px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .menu {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 /*# sourceMappingURL=style.css.map */

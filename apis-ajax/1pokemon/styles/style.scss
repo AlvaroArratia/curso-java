@@ -1,6 +1,8 @@
 $dark_blue: rgb(0, 0, 34);
 $blue: rgb(53, 100, 174);
 $yellow: rgb(255, 203, 5);
+$dark_yellow: rgb(128, 102, 0);
+$poke_red: rgb(219, 9, 43);
 $white: white;
 
 $box-size: 200px;
@@ -35,6 +37,10 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
 }
 
 .space-around {
@@ -105,13 +111,14 @@ li {
 
 .box-large {
     @include box-base;
-    width: $box-size;
-    height: $box-size;
-    background-image: url("http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png");
-    background-size: cover;
+    height: 150px;
+    min-width: 250px;
+    font-weight: bold;
+    //background-image: url("http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png");
+    //background-size: cover;
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.04);
     }
 }
 
@@ -120,13 +127,13 @@ li {
 ///////////Temas de cajas///////////
 .generic-box {
     color: $white;
-    border-color: yellow;
-    background-color: $dark_blue;
+    border-color: $yellow;
+    background-color: $blue;
 }
 
 .green-box {
     color: darkgreen;
-    border-color: darkviolet;
+    border-color: darkgreen;
     background-color: lightgreen;
 }
 
@@ -136,4 +143,84 @@ li {
     background-color: lightsalmon;
 }
 
+
+.blue-box {
+    color: $dark_blue;
+    border-color: $dark_blue;
+    background-color: lightblue;
+}
+
+.yellow-box {
+    color: $dark_yellow;
+    border-color: $yellow;
+    background-color: rgb(255, 255, 131);
+}
+
+.inactive-box {
+    border-color: $yellow;
+    transform: scale(1.04);
+}
+
 ////////////////////////////////////
+
+#pkms-btn {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png");
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#types-btn {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#ab-btn {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png");
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#items-btn {
+    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png");
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 724px) {
+    .menu {
+        flex-direction: column;
+
+        .box-large {
+            height: auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media only screen and (min-width: 725px) {
+    .menu {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        .box-large {
+            width: 250px;
+            height: 150px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .menu {
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+}

@@ -16,11 +16,27 @@ function addHtmlCss(pkmName, pkmId) {
     $("#" + pkmId).css("background-image", "url('http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmId + ".png')");
 }
 
-function getPkmTypes(pkmId) {
+function getPkmInfo(pkmId) {
     $.get("https://pokeapi.co/api/v2/pokemon/" + pkmId,
         function (res) {
             console.log(res.types);
             res.types;
+        },
+        "json");
+}
+
+function getPkmTypes() {
+    $.get("https://pokeapi.co/api/v2/type",
+        function (res) {
+            console.log(res.results);
+            for (const key in res.results) {
+                var typeName = formatName(res.results[key].name);
+                var typeId = parseInt(key) + 1;
+                $("#pokemons").append('<a id="' + typeId + '" class="type box generic-box">' +
+                    '<span id="pkm-name">' + typeName + '</span><br>' +
+                    '<span id="pkm-num">#' + typeId + '</span>' +
+                    '</a>');
+            }
         },
         "json");
 }
@@ -33,7 +49,12 @@ function getPokemons(lastId = 0) {
             for (const key in res.results) {
                 var pkmName = formatName(res.results[key].name);
                 var pkmId = parseInt(key) + 1 + lastId;
-                addHtmlCss(pkmName, pkmId);
+                //addHtmlCss(pkmName, pkmId);
+                $("#pokemons").append('<a id="' + pkmId + '" class="pkm box generic-box">' +
+                    '<span id="pkm-name">' + pkmName + '</span><br>' +
+                    '<span id="pkm-num">#' + pkmId + '</span>' +
+                    '</a>');
+                $("#" + pkmId).css("background-image", "url('http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmId + ".png')");
             }
             offset += 20;
         },
@@ -52,5 +73,35 @@ $(document).ready(function () {
 
     $("#pokemons").on("click", "a.pkm", function () {
         console.log("alo");
+    });
+
+    $(".menu button").click(function () {
+        if (!$(this).hasClass("inactive-box")) {
+            $(".menu button").attr("disabled", false);
+            $(".menu button").removeClass("inactive-box");
+            $(this).attr("disabled", true);
+            $(this).addClass("inactive-box");
+        }
+    });
+
+    $("#types-btn").click(function () {
+        $("#pokemons a").fadeOut();
+        setTimeout(function () {
+            $("#pokemons").empty();
+        }, 1000);
+        setTimeout(function () {
+            getPkmTypes();
+        }, 1000);
+    });
+
+    $("#pkms-btn").click(function () {
+        url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
+        $("#pokemons a").fadeOut();
+        setTimeout(function () {
+            $("#pokemons").empty();
+        }, 1000);
+        setTimeout(function () {
+            getPokemons();
+        }, 1000);
     });
 });
