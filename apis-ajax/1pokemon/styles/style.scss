@@ -39,6 +39,10 @@ body {
     flex-wrap: wrap;
 }
 
+.col-dir {
+    flex-direction: column;
+}
+
 .no-wrap {
     flex-wrap: nowrap;
 }
@@ -68,9 +72,9 @@ li {
 
 .list-item {
     transition: .5s ease;
-    background-color: $dark_blue;
+    background-color: $blue;
     color: white;
-    border: 3px solid $white;
+    border: 3px solid $yellow;
     border-radius: 15px;
     margin: 5px 0px 5px 0px;
     padding: 10px;
@@ -102,7 +106,9 @@ li {
     height: $box-size;
     font-weight: bold;
     //background-image: url("http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png");
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 180px;
 
     &:hover {
         transform: scale(1.1);
@@ -112,13 +118,19 @@ li {
 .box-large {
     @include box-base;
     height: 150px;
-    min-width: 250px;
+    max-width: 300px;
     font-weight: bold;
     //background-image: url("http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png");
     //background-size: cover;
 
     &:hover {
-        transform: scale(1.04);
+        transform: scale(1.07);
+    }
+
+    span {
+        border-radius: 3px;
+        padding: 3px;
+        background-color: rgba(79, 79, 79, 0.5);
     }
 }
 
@@ -158,37 +170,38 @@ li {
 
 .inactive-box {
     border-color: $yellow;
-    transform: scale(1.04);
+    //transform: scale(1.04);
 }
 
 ////////////////////////////////////
+.menu {
+    #pkms-btn {
+        background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png");
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-#pkms-btn {
-    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png");
-    background-size: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    #types-btn {
+        background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-#types-btn {
-    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
-    background-size: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    #ab-btn {
+        background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png");
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-#ab-btn {
-    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png");
-    background-size: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#items-btn {
-    background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png");
-    background-size: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
+    #items-btn {
+        background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png");
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 @media only screen and (max-width: 724px) {
@@ -196,10 +209,21 @@ li {
         flex-direction: column;
 
         .box-large {
+            max-width: none;
             height: auto;
             margin-top: 5px;
             margin-bottom: 5px;
+
+            &:hover {
+                transform: scale(1.03);
+            }
         }
+    }
+
+    .box {
+        height: 100px;
+        background-position: 55px;
+        background-size: 200px;
     }
 }
 
@@ -210,11 +234,22 @@ li {
         justify-content: center;
 
         .box-large {
-            width: 250px;
+            max-width: 300px;
+            width: 300px;
             height: 150px;
             margin-top: 10px;
             margin-bottom: 10px;
+
+            &:hover {
+                transform: scale(1.07);
+            }
         }
+    }
+
+    .box {
+        height: 200px;
+        background-position: center;
+        background-size: 180px;
     }
 }
 

@@ -10,8 +10,8 @@ function formatName(name) {
 
 function addHtmlCss(pkmName, pkmId) {
     $("#pokemons").append('<a id="' + pkmId + '" class="pkm box generic-box">' +
-        '<span id="pkm-name">' + pkmName + '</span><br>' +
-        '<span id="pkm-num">#' + pkmId + '</span>' +
+        '<span class="pkm-name">' + pkmName + '</span><br>' +
+        '<span class="pkm-num">#' + pkmId + '</span>' +
         '</a>');
     $("#" + pkmId).css("background-image", "url('http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmId + ".png')");
 }
@@ -33,8 +33,8 @@ function getPkmTypes() {
                 var typeName = formatName(res.results[key].name);
                 var typeId = parseInt(key) + 1;
                 $("#pokemons").append('<a id="' + typeId + '" class="type box generic-box">' +
-                    '<span id="pkm-name">' + typeName + '</span><br>' +
-                    '<span id="pkm-num">#' + typeId + '</span>' +
+                    '<div class="pkm-text"><span class="pkm-name">' + typeName + '</span><br>' +
+                    '<span class="pkm-num">#' + typeId + '</span></div>' +
                     '</a>');
             }
         },
@@ -51,8 +51,8 @@ function getPokemons(lastId = 0) {
                 var pkmId = parseInt(key) + 1 + lastId;
                 //addHtmlCss(pkmName, pkmId);
                 $("#pokemons").append('<a id="' + pkmId + '" class="pkm box generic-box">' +
-                    '<span id="pkm-name">' + pkmName + '</span><br>' +
-                    '<span id="pkm-num">#' + pkmId + '</span>' +
+                    '<span class="pkm-name">' + pkmName + '</span><br>' +
+                    '<span class="pkm-num">#' + pkmId + '</span>' +
                     '</a>');
                 $("#" + pkmId).css("background-image", "url('http://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmId + ".png')");
             }
@@ -62,10 +62,11 @@ function getPokemons(lastId = 0) {
 }
 
 $(document).ready(function () {
+    var scrollContent = true;
     getPokemons();
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() >= $(document).height() - $(window).height() - 1) {
+        if ($(window).scrollTop() >= $(document).height() - $(window).height() - 1 && scrollContent) {
             var lastId = $("#pokemons").children().length;
             getPokemons(lastId);
         }
@@ -85,6 +86,7 @@ $(document).ready(function () {
     });
 
     $("#types-btn").click(function () {
+        scrollContent = false;
         $("#pokemons a").fadeOut();
         setTimeout(function () {
             $("#pokemons").empty();
@@ -95,6 +97,7 @@ $(document).ready(function () {
     });
 
     $("#pkms-btn").click(function () {
+        scrollContent = true;
         url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
         $("#pokemons a").fadeOut();
         setTimeout(function () {
