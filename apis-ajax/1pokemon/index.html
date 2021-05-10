@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/header/header.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js">
@@ -18,14 +18,19 @@
 <body>
     <nav class="nav">
         <img src="img/Pokémon-Logo.png" alt="pokemon.png">
+        <button class="menu-btn">-</button>
     </nav>
     <div class="menu row no-wrap space-around">
-        <button id="pkms-btn" class="col col-4 box-large green-box inactive-box" disabled><span>Pokemones</span></button>
+        <button id="pkms-btn" class="col col-4 box-large green-box inactive-box"
+            disabled><span>Pokemones</span></button>
         <button id="types-btn" class="col col-4 box-large red-box"><span>Tipos</span></button>
         <button id="ab-btn" class="col col-4 box-large blue-box"><span>Habilidades</span></button>
         <button id="items-btn" class="col col-4 box-large yellow-box"><span>Items</span></button>
     </div>
     <div class="container">
+        <div class="pkm-content">
+
+        </div>
         <div id="pokemons" class="row space-around">
         </div>
     </div>

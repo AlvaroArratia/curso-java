@@ -1,4 +1,4 @@
-$dark_blue: rgb(0, 0, 34);
+$dark_blue: rgb(0, 0, 92);
 $blue: rgb(53, 100, 174);
 $yellow: rgb(255, 203, 5);
 $dark_yellow: rgb(128, 102, 0);
@@ -19,7 +19,7 @@ $columns: 12;
 }
 
 body {
-    background-color: $blue;
+    background-color: $poke_red;
     background-image: url("https://i.pinimg.com/originals/66/89/dc/6689dc331be27e66349ce9a4d15ddff3.gif");
     background-size: 125px;
 }
@@ -130,7 +130,7 @@ li {
     span {
         border-radius: 3px;
         padding: 3px;
-        background-color: rgba(79, 79, 79, 0.5);
+        //background-color: rgba(79, 79, 79, 0.5);
     }
 }
 
@@ -164,17 +164,19 @@ li {
 
 .yellow-box {
     color: $dark_yellow;
-    border-color: $yellow;
+    border-color: $dark_yellow;
     background-color: rgb(255, 255, 131);
 }
 
 .inactive-box {
-    border-color: $yellow;
+    background-color: silver;
     //transform: scale(1.04);
 }
 
 ////////////////////////////////////
 .menu {
+    background-color: $yellow;
+
     #pkms-btn {
         background-image: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png");
         background-size: 150px;

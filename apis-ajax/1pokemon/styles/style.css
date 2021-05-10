@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #3564ae;
+  background-color: #db092b;
   background-image: url("https://i.pinimg.com/originals/66/89/dc/6689dc331be27e66349ce9a4d15ddff3.gif");
   background-size: 125px;
 }
@@ -150,7 +150,7 @@ li {
 .box {
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  background-color: #000022;
+  background-color: #00005c;
   color: white;
   border: 4px solid white;
   text-align: start;
@@ -175,7 +175,7 @@ li {
 .box-large {
   -webkit-transition: .5s ease;
   transition: .5s ease;
-  background-color: #000022;
+  background-color: #00005c;
   color: white;
   border: 4px solid white;
   text-align: start;
@@ -196,7 +196,6 @@ li {
 .box-large span {
   border-radius: 3px;
   padding: 3px;
-  background-color: rgba(79, 79, 79, 0.5);
 }
 
 .generic-box {
@@ -218,19 +217,23 @@ li {
 }
 
 .blue-box {
-  color: #000022;
-  border-color: #000022;
+  color: #00005c;
+  border-color: #00005c;
   background-color: lightblue;
 }
 
 .yellow-box {
   color: #806600;
-  border-color: #ffcb05;
+  border-color: #806600;
   background-color: #ffff83;
 }
 
 .inactive-box {
-  border-color: #ffcb05;
+  background-color: silver;
+}
+
+.menu {
+  background-color: #ffcb05;
 }
 
 .menu #pkms-btn {

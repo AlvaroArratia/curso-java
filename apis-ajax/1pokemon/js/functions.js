@@ -1,6 +1,7 @@
 var limit = 20,
     offset = 0;
 var url = "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0";
+var scrollContent = true;
 
 function formatName(name) {
     var firstLetter = name.charAt(0).toUpperCase();
@@ -19,8 +20,8 @@ function addHtmlCss(pkmName, pkmId) {
 function getPkmInfo(pkmId) {
     $.get("https://pokeapi.co/api/v2/pokemon/" + pkmId,
         function (res) {
-            console.log(res.types);
-            res.types;
+            console.log(res);
+
         },
         "json");
 }
@@ -28,7 +29,7 @@ function getPkmInfo(pkmId) {
 function getPkmTypes() {
     $.get("https://pokeapi.co/api/v2/type",
         function (res) {
-            console.log(res.results);
+            console.log(res);
             for (const key in res.results) {
                 var typeName = formatName(res.results[key].name);
                 var typeId = parseInt(key) + 1;
@@ -62,7 +63,7 @@ function getPokemons(lastId = 0) {
 }
 
 $(document).ready(function () {
-    var scrollContent = true;
+    $(".menu").hide();
     getPokemons();
 
     $(window).scroll(function () {
@@ -72,8 +73,17 @@ $(document).ready(function () {
         }
     });
 
+    $(".menu-btn").click(function () {
+        if ($(".menu-btn").text() === "-") {
+            $(".menu-btn").text("+");
+        } else {
+            $(".menu-btn").text("-");
+        }
+        $(".menu").slideToggle(1000);
+    });
+
     $("#pokemons").on("click", "a.pkm", function () {
-        console.log("alo");
+        getPkmInfo(parseInt($(this).attr("id")));
     });
 
     $(".menu button").click(function () {

@@ -30,6 +30,27 @@
   font-size: 14px;
 }
 
+.nav .menu-btn {
+  height: 30px;
+  width: 60px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: bolder;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #ffcb05;
+  color: #3564ae;
+  border: 3px solid #3564ae;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav .menu-btn:hover {
+  color: #db092b;
+  border-color: #db092b;
+}
+
 .nav .blue-btn {
   -webkit-transition: .3s ease;
   transition: .3s ease;
@@ -39,7 +60,7 @@
 
 .nav .blue-btn:hover {
   background-color: #3564ae;
-  border-color: #000022;
+  border-color: #00005c;
   color: white;
 }
 
