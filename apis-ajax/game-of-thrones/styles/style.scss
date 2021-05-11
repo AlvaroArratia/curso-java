@@ -1,0 +1,132 @@
+$columns: 12;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+    outline: 1px solid red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+@for $width-col from 1 through $columns {
+    .col-#{$width-col} {
+        flex-basis: $width-col / $columns * 100%;
+    }
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-arround {
+    justify-content: space-around;
+}
+
+.box {
+    border: 3px solid;
+    border-radius: 10px;
+    background-color: darkkhaki;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@for $width from 1 through 4 {
+    @if $width==4 {
+        .w-full {
+            width: 100%;
+        }
+    }
+
+    @if $width !=4 {
+        .w-#{$width} {
+            width: 100 - ($width * 25%);
+        }
+    }
+}
+
+@for $height from 1 through 4 {
+    @if $height==4 {
+        .h-full {
+            height: 100%;
+        }
+    }
+
+    @if $height !=4 {
+        .h-#{$height} {
+            height: 100 - ($height * 25%);
+        }
+    }
+}
+
+@for $padding from 1 through 5 {
+    .p-#{$padding} {
+        padding: 5* $padding * 1px;
+    }
+
+    .pt-#{$padding} {
+        padding-top: 5* $padding * 1px;
+    }
+
+    .pb-#{$padding} {
+        padding-bottom: 5* $padding * 1px;
+    }
+
+    .pl-#{$padding} {
+        padding-left: 5* $padding * 1px;
+    }
+
+    .pr-#{$padding} {
+        padding-right: 5* $padding * 1px;
+    }
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@for $margin from 1 through 3 {
+    .m-#{$margin} {
+        margin: 5* $margin * 1px;
+    }
+
+    .mt-#{$margin} {
+        margin-top: 5* $margin * 1px;
+    }
+
+    .mb-#{$margin} {
+        margin-bottom: 5* $margin * 1px;
+    }
+
+    .ml-#{$margin} {
+        margin-left: 5* $margin * 1px;
+    }
+
+    .mr-#{$margin} {
+        margin-right: 5* $margin * 1px;
+    }
+}
