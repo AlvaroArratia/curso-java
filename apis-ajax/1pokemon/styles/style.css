@@ -54,6 +54,12 @@ body {
       justify-content: space-around;
 }
 
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,9 +68,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .col-1 {
@@ -148,19 +151,18 @@ li {
 }
 
 .box {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  background-color: #00005c;
+  background-color: #3564ae;
   color: white;
-  border: 4px solid white;
-  text-align: start;
+  border: 4px solid #ffcb05;
   border-radius: 15px;
   margin: 10px;
   padding: 10px;
-  font-size: 14px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
   min-width: 200px;
   width: 200px;
   height: 200px;
+  font-size: 14px;
   font-weight: bold;
   background-position: center;
   background-repeat: no-repeat;
@@ -173,18 +175,17 @@ li {
 }
 
 .box-large {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  background-color: #00005c;
+  background-color: #3564ae;
   color: white;
-  border: 4px solid white;
-  text-align: start;
+  border: 4px solid #ffcb05;
   border-radius: 15px;
   margin: 10px;
   padding: 10px;
-  font-size: 14px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
   height: 150px;
   max-width: 300px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -196,6 +197,42 @@ li {
 .box-large span {
   border-radius: 3px;
   padding: 3px;
+}
+
+.box-xl {
+  background-color: #3564ae;
+  color: white;
+  border: 4px solid #ffcb05;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.red-bg {
+  background-color: #db092b;
+}
+
+.full-width {
+  width: 100%;
+}
+
+#pkm-content {
+  padding: 0px;
+}
+
+#pkm-content h1 {
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+#pkm-content #pkm-img {
+  margin: 10px;
+  min-height: 250px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .generic-box {
