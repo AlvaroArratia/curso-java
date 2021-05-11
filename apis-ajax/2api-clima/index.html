@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="styles/map.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+
+<body>
+    <form>
+        <label for="city">City:</label>
+        <input id="city" name="city" type="text">
+        <input type="submit" value="Submit Query">
+    </form>
+    <p>
+        Ciudad:<span id="city-loc"></span><br>
+        Descripcion:<span id="city-weather-desc"></span><br>
+        Temperatura:<span id="city-temp"></span><br>
+        Temp. min:<span id="city-temp-min"></span><br>
+        Temp. max:<span id="city-temp-max"></span><br>
+        Humedad:<span id="city-hum"></span><br>
+
+    </p>
+    <div id="map"></div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYqfxtE6jiPPkiTqmCg5fCmq8O668yONc&callback=initMap"
+        type="text/javascript"></script>
+</body>
+
+</html>
