@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    //outline: 1px solid red;
+}
+
+$bg_color_black: rgb(26, 26, 26);
+
+$nav_menu_top: rgb(81, 81, 81);
+$nav_menu_bottom: rgb(37, 37, 37);
+$disabled-btn: rgb(163, 163, 163);
+
+$hr: rgb(59, 59, 59);
+
+$h2_orange: rgb(239, 121, 39);
+
+$call_to_text: rgb(176, 176, 173);
+
+$buy_btn_top: rgb(242, 156, 91);
+$buy_btn_bottom: rgb(239, 127, 44);
+
+body {
+    font-family: sans-serif;
+    color: white;
+}
+
+.bg-dark {
+    background-color: $bg_color_black;
+}
+
+#nav-menu {
+    background: linear-gradient(to bottom, $nav_menu_top, $nav_menu_bottom);
+    //background-color: $nav_menu_top;
+
+    button {
+        background: linear-gradient(to bottom, $nav_menu_top, $nav_menu_bottom);
+        padding: 12px 15px 12px 15px;
+        color: white;
+
+        span {
+            font-size: 9px;
+        }
+    }
+
+    button.disabled {
+        color: $disabled-btn;
+    }
+}
+
+#slider {
+    //display: flex;
+    //width: 400%;
+
+    li {
+        height: 355px;
+        list-style: none;
+
+        img {
+            height: 355px;
+        }
+    }
+
+}
+
+hr {
+    height: 8px;
+    background-color: $hr;
+}
+
+#content {
+    h3 {
+        font-weight: normal;
+        color: $h2_orange;
+    }
+
+    p {
+        font-size: 13px;
+    }
+}
+
+#call-to-action {
+    background-image: url("../img/stripe.png");
+    background-repeat: repeat;
+
+    h2 {
+        font-weight: normal;
+    }
+
+    p {
+        color: $call_to_text;
+        font-size: 14px;
+    }
+
+    button {
+        background: linear-gradient(to bottom, $buy_btn_top, $buy_btn_bottom);
+        //background-color: $buy_btn_top;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+#portfolio {
+    a {
+        text-decoration: none;
+        font-style: italic;
+        font-size: 12px;
+        color: $h2_orange;
+    }
+
+    #portfolio-info {
+        h4 {
+            font-weight: normal;
+            color: $h2_orange;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        img {
+            border: 5px solid $hr;
+
+        }
+    }
+}
+
+#footer {
+    button {
+        font-size: 12px;
+        color: $disabled-btn;
+        background-color: $bg_color_black;
+        cursor: pointer;
+    }
+}

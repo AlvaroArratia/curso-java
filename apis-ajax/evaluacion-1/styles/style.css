@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+}
+
+.bg-dark {
+  background-color: #1a1a1a;
+}
+
+#nav-menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(#515151), to(#252525));
+  background: linear-gradient(to bottom, #515151, #252525);
+}
+
+#nav-menu button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#515151), to(#252525));
+  background: linear-gradient(to bottom, #515151, #252525);
+  padding: 12px 15px 12px 15px;
+  color: white;
+}
+
+#nav-menu button span {
+  font-size: 9px;
+}
+
+#nav-menu button.disabled {
+  color: #a3a3a3;
+}
+
+#slider li {
+  height: 355px;
+  list-style: none;
+}
+
+#slider li img {
+  height: 355px;
+}
+
+hr {
+  height: 8px;
+  background-color: #3b3b3b;
+}
+
+#content h3 {
+  font-weight: normal;
+  color: #ef7927;
+}
+
+#content p {
+  font-size: 13px;
+}
+
+#call-to-action {
+  background-image: url("../img/stripe.png");
+  background-repeat: repeat;
+}
+
+#call-to-action h2 {
+  font-weight: normal;
+}
+
+#call-to-action p {
+  color: #b0b0ad;
+  font-size: 14px;
+}
+
+#call-to-action button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f29c5b), to(#ef7f2c));
+  background: linear-gradient(to bottom, #f29c5b, #ef7f2c);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#portfolio a {
+  text-decoration: none;
+  font-style: italic;
+  font-size: 12px;
+  color: #ef7927;
+}
+
+#portfolio #portfolio-info h4 {
+  font-weight: normal;
+  color: #ef7927;
+}
+
+#portfolio #portfolio-info p {
+  font-size: 14px;
+}
+
+#portfolio #portfolio-info img {
+  border: 5px solid #3b3b3b;
+}
+
+#footer button {
+  font-size: 12px;
+  color: #a3a3a3;
+  background-color: #1a1a1a;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

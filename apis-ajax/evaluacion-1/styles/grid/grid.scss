@@ -1,16 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: sans-serif;
-    outline: 1px solid red;
-}
-
 $columns: 12;
 
 .container {
     display: flex;
     flex-direction: column;
+    width: 976px;
 }
 
 .row {
@@ -28,6 +21,14 @@ $columns: 12;
     }
 }
 
+.flex-d-row {
+    flex-direction: row;
+}
+
+.flex-d-col {
+    flex-direction: column;
+}
+
 .no-wrap {
     flex-wrap: nowrap;
 }
@@ -36,12 +37,24 @@ $columns: 12;
     align-items: center;
 }
 
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
 .justify-center {
     justify-content: center;
 }
 
+.justify-start {
+    justify-content: start;
+}
+
 .justify-space-arround {
     justify-content: space-around;
+}
+
+.justify-space-btw {
+    justify-content: space-between;
 }
 
 .text-center {
