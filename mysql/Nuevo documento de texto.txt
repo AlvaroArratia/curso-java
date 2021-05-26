@@ -1,0 +1,9 @@
+Entidad > atributos
+
+socio > cod video club, nombre, direccion, telefono, 
+	(directores fav, actores fav, generos preferencia) > otras entidades
+pelicula > titulo, genero, director, actores
+peliculas prestadas > fecha de prestamo, fecha limite
+peliculas devueltas > fecha devolucion
+lista de espera
+cinta
