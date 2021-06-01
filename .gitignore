@@ -23,4 +23,8 @@ css/3portafolio/style.css
 ## JS
 
 ## MYSQL
+*.txt
 *.mwb.bak
+world.sql
+sakila-data.sql
+friendships.sql
