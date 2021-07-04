@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurantMenu>
+    <breakfastMenu>
+        <item category="bebidas">
+            <name>Jugo de Naranja</name>
+            <description>Un jugo hecho con naranjas.</description>
+            <price>$0.99</price>
+        </item>
+        <item category="lacteos">
+            <name>Vaso de leche</name>
+            <description>Un vaso de leche.</description>
+            <price>$0.99</price>
+        </item>
+        <item category="lacteos">
+            <name>Yogurt</name>
+            <description>Un yogurt.</description>
+            <price>$0.99</price>
+        </item>
+        <item category="frutas">
+            <name>Naranja</name>
+            <description>Una naranja.</description>
+            <price>$0.99</price>
+        </item>
+        <item category="panaderia">
+            <name>Pan hallulla</name>
+            <description>Un pan hallulla.</description>
+            <price>$0.99</price>
+        </item>
+    </breakfastMenu>
+    <dinnerMenu>
+        <item category="entradas">
+            <name>Atun con tomate</name>
+            <description>Un plato de atun con tomate.</description>
+            <price>$0.99</price>
+        </item>
+        <item category="principales">
+            <name>Asado a la olla con papas cocidas</name>
+            <description>Un trozo de asado a la olla con papas cocidas.</description>
+            <price>$0.99</price>
+        </item>
+        <item category="ensaladas">
+            <name>Lechuga</name>
+            <description>Una ensalada de lechuga.</description>
+            <price>$0.99</price>
+        </item>
+        <item category="postres">
+            <name>Helado de piña</name>
+            <description>Helado de piña de agua.</description>
+            <price>$0.99</price>
+        </item>
+    </dinnerMenu>
+</restaurantMenu>

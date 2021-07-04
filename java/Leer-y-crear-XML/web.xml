@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <display-name>SimpleServletProject</display-name> <!--Nombre del proyecto, que se mostrara-->
+    
+    <servlet> <!--Servlet que se ocupara en el proyecto-->
+        <servlet-name>simpleServlet</servlet-name> <!--Nombre del servlet-->
+        <servlet-class>org.codingdojo.tutorial.SimpleServlet</servlet-class> <!--El paquete donde se encuentra el servlet-->
+    </servlet>
+    
+    <servlet-mapping> <!--Estructura del servlet-->
+        <servlet-name>simpleServlet</servlet-name>
+        <url-pattern>/simpleServlet</url-pattern> <!--La url base para cada endpoint-->
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>xmlServlet</servlet-name>
+        <servlet-class>org.codingdojo.tutorial.XmlServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>xmlServlet</servlet-name>
+        <url-pattern>/xmlServletpath</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+    <welcome-file>index.html</welcome-file> <!--La pagina de bienvenida-->
+    </welcome-file-list>
+</web-app>
